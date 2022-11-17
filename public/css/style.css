@@ -353,6 +353,11 @@ h6 {
 .footer-main-container {
   padding: 22px 110px 30px 110px;
   background-color: #222222;
+  /* display: flex;
+  flex-wrap: nowrap; */
+  display: grid;
+  grid-template-columns: 3fr 2fr 2fr 2fr;
+  grid-gap: 100px;
 }
 
 .footer-main-list {
@@ -362,11 +367,11 @@ h6 {
 
 }
 
-.footer-main-item {
+/* .footer-main-item {
   width: calc(25% - 20px);
   margin-right: 25px;
 
-}
+} */
 
 .footer-main-item>p {
   color: #ccc;
@@ -378,6 +383,13 @@ h6 {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 10px;
+}
+
+.shop-system{
+  
+    margin-right: 50px;
+
+    
 }
 
 .shop-system-info {
@@ -474,4 +486,3 @@ h6 {
   font-size: 14px;
   text-align: center;
 }
-
