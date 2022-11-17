@@ -1,49 +1,74 @@
-let slideIndex = 1;
-showSlides(slideIndex);
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+// // Next/previous controls
+// function plusSlides(n) {
+//   showSlides((slideIndex += n));
+// }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+// // Thumbnail image controls
+// function currentSlide(n) {
+//   showSlides((slideIndex = n));
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("header-slide-item");
-  if (n > slides.length) {
-    slideIndex = 1;
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("header-slide-item");
+//   if (n > slides.length) {
+//     slideIndex = 1;
+//   }
+//   if (n < 1) {
+//     slideIndex = slides.length;
+//   }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
+
+//   slides[slideIndex - 1].style.display = "block";
+// }
+
+// function openCity(evt, cityName) {
+//   // Declare all variables
+//   var i, tabcontent, tablinks;
+
+//   // Get all elements with class="tabcontent" and hide them
+//   tabcontent = document.getElementsByClassName("tabcontent");
+//   for (i = 0; i < tabcontent.length; i++) {
+//     tabcontent[i].style.display = "none";
+//   }
+
+//   // Get all elements with class="tablinks" and remove the class "active"
+//   tablinks = document.getElementsByClassName("tablinks");
+//   for (i = 0; i < tablinks.length; i++) {
+//     tablinks[i].className = tablinks[i].className.replace(" active", "");
+//   }
+
+//   // Show the current tab, and add an "active" class to the button that opened the tab
+//   document.getElementById(cityName).style.display = "block";
+//   evt.currentTarget.className += " active";
+// }
+
+var index = 0;
+ShowBanner = function () {
+  var img = [
+    "/public/image/banner/banner_0.jpg",
+    "/public/image/banner/banner_1.jpg",
+    "/public/image/banner/banner_2.jpg",
+    "/public/image/banner/banner_3.jpg",
+    "/public/image/banner/banner_4.jpg",
+  ];
+  document.querySelector("#img_banner").src = img[index];
+
+  if (index == 5) {
+    index = 0;
   }
-  if (n < 1) {
-    slideIndex = slides.length;
+  //chuyển đến slide tiếp theo
+  index++;
+
+  //nếu đang ở slide cuối cùng thì chuyển về slide đầu
+  if (index > img.length - 1) {
+    index = 0
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-
-function openCity(evt, cityName) {
-  // Declare all variables
-  var i, tabcontent, tablinks;
-
-  // Get all elements with class="tabcontent" and hide them
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  // Get all elements with class="tablinks" and remove the class "active"
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the button that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+};
+setInterval(ShowBanner, 2000);
+ShowBanner(index = 0);
