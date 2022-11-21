@@ -5,16 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng ký</title>
-    <title>Đăng ký</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <title>Cập nhật tài khoản</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/reset.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
         rel="stylesheet" />
-        
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
-    <link rel="stylesheet" href="../css/reset.css" />
-    <link rel="stylesheet" href="../css/style.css" />
+</head>
 
 <body>
     <div class="wrapper">
@@ -98,40 +95,38 @@
         <!-- End-header -->
 
         <main class="main">
-            <div class="main-form">
-                <form action="#" class="form">
-                    <h4 class="form-title">Đăng ký</h4>
-                    <div class="form-group">
-                        <label for="#" class="form-label">First Name</label>
-                        <input type="text" name="" class="form-input" placeholder="Họ" />
-                    </div>
-                    <div class="form-group">
-                        <label for="#" class="form-label">Last Name</label>
-                        <input type="text" name="" class="form-input" placeholder="Tên" />
-                    </div>
-                    <div class="form-group">
-                        <label for="#" class="form-label">Tên đăng nhập</label>
-                        <input type="text" name="" class="form-input" placeholder="Username" />
-                    </div>
-                    <div class="form-group">
-                        <label for="#" class="form-label">Email</label>
-                        <input type="email" name="" class="form-input" placeholder="Email" />
-                    </div>
-                    <div class="form-group">
-                        <label for="#" class="form-label">Tạo mật khẩu</label>
-                        <input type="password" name="" class="form-input" />
-                    </div>
-                    <div class="form-group">
-                        <label for="#" class="form-label">Nhập lại mật khẩu</label>
-                        <input type="password" name="" class="form-input" />
-                    </div>
-                    <div class="form-group">
-                        <button type="submit" class="form-btn">Đăng ký</button>
+            <div class="main-update-acc">
+                <h1 class="user-update-title">Cập nhật tài khoản</h1>
+                <form action="#" class="form-user">
+                    <div class="form-user-group">
+                        <label for="" class="form-user-label">Tên đăng nhập</label>
+                        <input type="text" class="form-user-input" disabled />
                     </div>
 
-                    <div class="form-signin">
-                        <span class="form-sign-text">
-                            Đã có tài khoản? <a href="./login.html">Đăng Nhập</a></span>
+                    <div class="form-user-group">
+                        <label for="" class="form-user-label">Họ</label>
+                        <input type="text" class="form-user-input" />
+                    </div>
+                    <div class="form-user-group">
+                        <label for="" class="form-user-label">Tên</label>
+                        <input type="text" class="form-user-input" />
+                    </div>
+                    <div class="form-user-group">
+                        <label for="" class="form-user-label">Năm sinh</label>
+                        <input type="text" class="form-user-input" />
+                    </div>
+                    <div class="form-user-group">
+                        <label for="" class="form-user-label">Địa chỉ email</label>
+                        <input type="text" class="form-user-input" />
+                    </div>
+                    <div class="form-user-group">
+                        <img src="#" alt="" class="form-user-image" />
+                        <label for="" class="form-user-label">Ảnh đại diện</label>
+                        <input type="file" class="form-user-input" />
+                    </div>
+
+                    <div class="form-user-group">
+                        <button class="form-user-btn" type="submit">Cập nhật</button>
                     </div>
                 </form>
             </div>
@@ -202,6 +197,7 @@
             </div>
         </footer>
         <!-- End footer -->
+
 </body>
 
 </html>
