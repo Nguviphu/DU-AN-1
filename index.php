@@ -1,4 +1,8 @@
 <?php
+include "./global.php";
+include "./dao/pdo.php";
+
+
 require_once './global.php';
 header("location: " . SITE_URL);
 // Công việc của Phúc.
