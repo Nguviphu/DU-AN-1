@@ -41,12 +41,3 @@ CREATE TABLE `rooms` (
   `rooms_name` int
 );
 
-ALTER TABLE `class_detail` ADD FOREIGN KEY (`class_id`) REFERENCES `classes` (`id`);
-
-ALTER TABLE `schedule` ADD FOREIGN KEY (`id`) REFERENCES `classes` (`schedule_id`);
-
-ALTER TABLE `class_detail` ADD FOREIGN KEY (`student_id`) REFERENCES `student` (`id`);
-
-ALTER TABLE `calendar` ADD FOREIGN KEY (`id`) REFERENCES `classes` (`number_session`);
-
-ALTER TABLE `rooms` ADD FOREIGN KEY (`id`) REFERENCES `class_detail` (`room_id`);

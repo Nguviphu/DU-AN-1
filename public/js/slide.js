@@ -70,5 +70,5 @@ ShowBanner = function () {
     index = 0
   }
 };
-setInterval(ShowBanner, 2000);
+setInterval(ShowBanner, 3000);
 ShowBanner(index = 0);
