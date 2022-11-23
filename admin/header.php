@@ -71,11 +71,7 @@
                 <!-- Giáo viên -->
 
                 <li>
-
-
-
-
-                <a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
+<a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
                         <i class="fas fa-user-friends"></i>Quản lý giáo viên
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
@@ -86,7 +82,7 @@
                         </li>
                     </ul>
                 </li>
-  
+
 
                 <!-- Học viên -->
 
@@ -136,3 +132,26 @@
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
                                         <li>
+<a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
+                                                sơ</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Thông
+                                                báo</a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Cài đặt</a>
+                                        </li>
+                                        <div class="dropdown-divider"></div>
+                                        <li>
+                                            <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Đăng
+                                                xuất</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- end of navbar navigation -->
