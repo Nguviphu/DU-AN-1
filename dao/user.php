@@ -1,14 +1,17 @@
 <?php
 
-// Lấy tất cả user
+// Thêm mới user
 
-function load_all() {
-    $sql = "select * from ";
-}
+    function insert_user($phone ,$name, $email, $image, $pass) {
 
-function insert_user() {
+    $sql = "insert into student(phone, name, email, image, password) values('".$phone."', '".$name."', '".$email."', '".$image."', '".$pass."')";
+
+    pdo_execute($sql);
+        
     
-}
+    }
+
+
 
 
 ?>

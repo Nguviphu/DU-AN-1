@@ -23,7 +23,7 @@
                         <button type="submit" class="form-login-btn">Đăng nhập</button>
                     </div>
                     <div class="form-singup">
-                        <span class="form-signup-text">Bạn chưa có tài khoản? <a href="./signup.html">Đăng
+                        <span class="form-signup-text">Bạn chưa có tài khoản? <a href="index.php?ctrl=dangky">Đăng
                                 ký</a></span>
                     </div>
                 </form>

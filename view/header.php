@@ -78,10 +78,10 @@
         <nav class="header-nav">
           <ul class="header-menu">
             <li class="header-item">
-              <a href="./index.html" class="header-link">Trang chủ</a>
+              <a href="index.php" class="header-link">Trang chủ</a>
             </li>
             <li class="header-item">
-              <a href="./gioi_thieu.html" class="header-link">Giới thiệu</a>
+              <a href="index.php?ctrl=introduce" class="header-link">Giới thiệu</a>
             </li>
             <li class="header-item">
               <a href="#" class="header-link">Khoá học</a>
@@ -90,7 +90,7 @@
               <a href="#" class="header-link">Lịch học</a>
             </li>
             <li class="header-item">
-              <a href="./blog.html" class="header-link">Blog</a>
+              <a href="index.php?ctrl=blog" class="header-link">Blog</a>
             </li>
           </ul>
         </nav>
