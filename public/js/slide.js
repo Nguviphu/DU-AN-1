@@ -51,11 +51,11 @@
 var index = 0;
 ShowBanner = function () {
   var img = [
-    "/public/image/banner/banner_0.jpg",
-    "/public/image/banner/banner_1.jpg",
-    "/public/image/banner/banner_2.jpg",
-    "/public/image/banner/banner_3.jpg",
-    "/public/image/banner/banner_4.jpg",
+    "./public/image/banner/banner_0.jpg",
+    "./public/image/banner/banner_1.jpg",
+    "./public/image/banner/banner_2.jpg",
+    "./public/image/banner/banner_3.jpg",
+    "./public/image/banner/banner_4.jpg",
   ];
   document.querySelector("#img_banner").src = img[index];
 
