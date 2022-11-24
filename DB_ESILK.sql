@@ -41,4 +41,3 @@ CREATE TABLE `rooms` (
   `rooms_name` int
 );
 
-
