@@ -6,30 +6,36 @@
                     <div class="form-group">
                         <label for="#" class="form-label">Tên đăng nhập</label>
                         <input type="text" name="fullname" class="form-input" placeholder="Username" />
+                        <p style="color: red;"><?php if(!empty($error['fullname'])) echo $error['fullname'] ?></p>
                     </div>
 
                     <div class="form-group">
                         <label for="#" class="form-label">SĐT</label>
                         <input type="text" name="sdt" class="form-input" placeholder="SĐT" />
+                        <p style="color: red;"><?php if(!empty($error['sdt'])) echo $error['sdt'] ?></p>
                     </div>
 
                     <div class="form-group">
                         <label for="#" class="form-label">Email</label>
-                        <input type="email" name="email" class="form-input" placeholder="Email" />
+                        <input type="text" name="email" class="form-input" placeholder="Example: name@company.com" />
+                        <p style="color: red;"><?php if(!empty($error['email'])) echo $error['email'] ?></p>
                     </div>
 
                     <div class="form-group">
                         <label for="#" class="form-label">Hình ảnh</label>
                         <input type="file" name="image" class="form-input" placeholder="Hình ảnh" />
+                        <p style="color: red;"><?php if(!empty($error['image'])) echo $error['image'] ?></p>
                     </div>
 
                     <div class="form-group">
                         <label for="#" class="form-label">Tạo mật khẩu</label>
                         <input type="password" name="pass" class="form-input" />
+                        <p style="color: red;"><?php if(!empty($error['pass'])) echo $error['pass'] ?></p>
                     </div>
                     <div class="form-group">
                         <label for="#" class="form-label">Nhập lại mật khẩu</label>
                         <input type="password" name="pass-confirm" class="form-input" />
+                        <p style="color: red;"><?php if(!empty($error['pass-confirm'])) echo $error['pass-confirm'] ?></p>
                     </div>
 
 

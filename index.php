@@ -24,9 +24,48 @@
             case 'dangky':
 
                 if(isset($_POST['subscribe']) && ($_POST['subscribe'])) {
-                    $name = $_POST['fullname'];
-                    $phone = $_POST['sdt'];
-                    $email = $_POST['email'];
+
+                    // $checkemail = "^[a-zA-Z0-9._%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]{2,4}$";
+                    // $checkpass = "/^0[0-9]{9}$/";
+                    
+                    if (empty($_POST['fullname'])) {
+                       $error['fullname'] = "Tên đăng nhập không được trống";
+                    }
+                    else{
+                        $name = $_POST['fullname'];
+                    }
+
+
+                    if (empty($_POST['sdt'])) {
+                        $error['sdt'] = "SĐT không được trống";
+                     }elseif(!preg_match("/^0[0-9]{9}$/", $_POST['sdt'])) {
+                        $error['sdt'] = "SĐT không đúng định dạng";
+                     }
+                     
+                     else{
+                        $phone = $_POST['sdt'];
+                     }
+
+
+                     if (empty($_POST['email'])) {
+                        $error['email'] = "Email không được trống";
+                     }elseif(!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $_POST['email'])) {
+
+                        $error['email'] = "Email không đúng định dạng";
+
+
+                     }
+                     
+                     else{
+                        $email = $_POST['email'];
+                     }
+
+
+
+
+
+                    
+                    
 
 
                     $path_folder = "public/image/users/";
@@ -34,14 +73,42 @@
                     $path_upload_file = $path_folder.$_FILES['image']['name'];
 
                     move_uploaded_file($_FILES['image']['tmp_name'], $path_upload_file);
-
-                    $image = $path_upload_file;
-
-                    $pass = $_POST['pass'];
-
-                    insert_user($phone ,$name, $email, $image, $pass);
                     
-                    $thongbao = "✔️ Đăng ký thành công";
+
+
+                    if (empty($_POST['email'])) {
+                        $error['image'] = "Ảnh không được trống";
+                     }else{
+                        $image = $path_upload_file;
+                     }
+
+
+
+                    
+                     if (empty($_POST['pass'])) {
+                        $error['pass'] = "Mật khẩu không được trống";
+                     }elseif(!preg_match("/^([A-Z]){1}([\w_\.!@#$%^&*()]+){5,31}$/", $_POST['pass'])) {
+
+                        $error['pass'] = "Mật khẩu chưa đúng định dạng";
+                     }
+                     else{
+                        $pass = $_POST['pass'];
+                     }
+
+
+                    if($_POST['pass-confirm'] !== $_POST['pass']) {
+                        $error['pass-confirm'] = "Mật khẩu nhập lại không khớp!";
+                     }
+                     
+
+                    
+
+                    if(!empty(!empty($name) && !empty($phone) && !empty($email) && !empty($image) && !empty($pass) && !empty($_POST['pass-confirm']))) {
+                        insert_user($phone ,$name, $email, $image, $pass);
+                        $thongbao = "✔️ Đăng ký thành công";
+                    }
+                    
+                    
 
 
                 }
