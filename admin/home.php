@@ -1,3 +1,4 @@
+<!-- content -->
 <div class="content">
                 <div class="container">
                     <div class="cards row mt-5">
@@ -40,3 +41,4 @@
                     </div>
                 </div>
             </div>
+            <!-- end of content -->

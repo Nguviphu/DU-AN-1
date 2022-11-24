@@ -1,6 +1,6 @@
 <?php
-function insert_monHoc($tenloai){
-    $sql = "INSERT INTO `categories_subjects` (`subject_title`) VALUES ('')";
+function insert_monHoc($subject_title){
+    $sql = "INSERT INTO `categories_subjects` (`subject_title`) VALUES ('$subject_title')";
     pdo_execute($sql);
 }
 
@@ -20,7 +20,8 @@ function loadone_monHoc($id){
     return $list_one_monHoc;
 }
 function update_monHoc($id,$subject_title){
-    $sql = "update categories_subjects set name='".$subject_title."' where id=".$id;
+    $sql = "UPDATE `categories_subjects` SET `subject_title` = '$subject_title' 
+    WHERE `categories_subjects`.`id`=".$id;
     pdo_execute($sql);
 }
 ?>
