@@ -2,7 +2,7 @@
 
 // tạo kết nối từ project php sang mysql
 function pdo_get_connection(){
-    $dburl = "mysql:host=localhost;dbname=esilk;charset=utf8";
+    $dburl = "mysql:host=localhost;dbname=db_esilk;charset=utf8";
     $username = 'root';
     $password = '';
 
