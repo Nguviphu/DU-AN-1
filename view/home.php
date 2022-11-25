@@ -1,5 +1,4 @@
 
-
     <!-- Header-banner -->
     <div class="header-banner">
       <img src="./public/image/banner/banner_0.jpg" id="img_banner" onclick="ShowBanner()" />

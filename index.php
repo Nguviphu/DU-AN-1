@@ -39,7 +39,7 @@
                     if (empty($_POST['sdt'])) {
                         $error['sdt'] = "SĐT không được trống";
                      }elseif(!preg_match("/^0[0-9]{9}$/", $_POST['sdt'])) {
-                        $error['sdt'] = "SĐT không đúng định dạng";
+                        $error['sdt'] = "SĐT chưa đúng định dạng";
                      }
                      
                      else{
@@ -48,12 +48,10 @@
 
 
                      if (empty($_POST['email'])) {
-                        $error['email'] = "Email không được trống";
+                        $error['email'] = "Email không được để trống";
                      }elseif(!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $_POST['email'])) {
 
-                        $error['email'] = "Email không đúng định dạng";
-
-
+                        $error['email'] = "Email chưa đúng định dạng";
                      }
                      
                      else{

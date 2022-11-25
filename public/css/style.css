@@ -153,6 +153,7 @@ h6 {
 .header-input {
   width: 650px;
   padding: 6px 12px;
+  border-radius: 5px;
 }
 
 .header-search-icon {
@@ -176,10 +177,6 @@ h6 {
   color: #555;
 }
 
-.header-act {
-  display: flex;
-  align-items: center;
-}
 
 .header-act-icon:not(:last-child) {
   margin-right: 24px;
@@ -834,4 +831,8 @@ h6 {
   font-size: 20pt;
   font-weight: 500;
   text-decoration: none;
+}
+
+.header-bannerhocphi{
+  text-align: center;
 }

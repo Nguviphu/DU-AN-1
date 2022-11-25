@@ -33,8 +33,12 @@
 
                 <!-- Môn học -->
                 <li>
+<<<<<<< HEAD
+                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
+=======
                     <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false"
                         class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
+>>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
                     <ul class="collapse list-unstyled" id="subjects">
@@ -71,7 +75,11 @@
                 <!-- Giáo viên -->
 
                 <li>
+<<<<<<< HEAD
+                    <a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
+=======
 <a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
+>>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
                         <i class="fas fa-user-friends"></i>Quản lý giáo viên
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
@@ -124,15 +132,23 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item dropdown">
                             <div class="nav-dropdown">
+<<<<<<< HEAD
+                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
+=======
                                 <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary"
                                     data-bs-toggle="dropdown" aria-expanded="false">
+>>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
                                     <i class="fas fa-user"></i> <span>Admin</span>
                                     <i style="font-size: 0.8em" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
                                         <li>
+<<<<<<< HEAD
+                                            <a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
+=======
 <a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
+>>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
                                                 sơ</a>
                                         </li>
                                         <li>
