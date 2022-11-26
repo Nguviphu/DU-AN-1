@@ -11,6 +11,17 @@
     
     }
 
+// Check user
+
+    function check_user($name, $pass) {
+
+        $sql = "select * from student where name = '".$name."' and password = '".$pass."'";
+
+        return pdo_query_one($sql);
+
+
+    }
+
 
 
 
