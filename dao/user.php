@@ -22,6 +22,43 @@
 
     }
 
+// lấy ra số điện thoại và email từ bảng user
+
+function select_all_phone_email() {
+        $sql = "select phone, email from student";
+        return pdo_query($sql);
+}
+
+
+function select_phone($array) {
+
+    // Lấy ra mảng số điện thoại
+
+    $key = 'phone';
+               
+    $arr_sdt = array_map(function($item) use ($key) {
+       return $item[$key];
+    }, $array);
+
+    return $arr_sdt;
+}
+
+
+
+function select_email($array) {
+
+   // Lấy ra mảng email
+
+   $key = 'email';
+               
+   $arr_email = array_map(function($item) use ($key) {
+      return $item[$key];
+   }, $array);
+
+
+   return $arr_email;
+
+}
 
 
 
