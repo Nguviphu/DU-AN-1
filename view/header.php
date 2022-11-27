@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,21 +32,28 @@
 
 
 
-          <div class="header-user">
-          <?php
+              <?php
+
               if (isset($_SESSION['info_user'])) {
               extract($_SESSION['info_user']);
-              $image = "./public/image/user" .$image;
+
+              
+
               ?>
+
+
+          <div class="user-use" style="width: 500px;">
+          <h5>Xin chào học viên: <span style="font-size: 18px; text-transform: uppercase; color: #C31D39;"><?=$name ?></span></h5>
+          </div>
+
+
+
+          <div class="header-user">
             <i class="fa fa-user header-icon">
               <!-- header-dropdown -->
               <div class="header-dropdown-content">
-              <div class="user-use" style="width: 500px;">
-              <h5>Xin chào <span style="font-size: 18px; text-transform: uppercase; color: #C31D39;"><?=$name ?></span></h5>
-              </div>
-              <a href="#" class="header-dropdown-link">Đổi mật khẩu</a>
-              <a href="index.php?ctrl=dangxuat" class="header-dropdown-link">Đăng xuất</a>
-              <a href="#" class="header-dropdown-link">Cập nhật tài khoản</a>                
+                <a href="index.php?ctrl=dangxuat" class="header-dropdown-link">Đăng xuất</a>
+                
               </div>
             </i>
             <span class="header-text">Tài khoản</span>
