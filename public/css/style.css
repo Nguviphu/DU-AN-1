@@ -76,18 +76,6 @@ h6 {
   margin-right: 10px;
 }
 
-.header-user-image {
-  position: absolute;
-  top: 50%;
-  right: 95px;
-  transform: translateY(-50%);
-  width: 100%;
-  max-width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: inline-block;
-}
 
 /* Dropdown Content (Hidden by Default) */
 .header-dropdown-content {
@@ -279,12 +267,6 @@ h6 {
   font-size: 15pt;
 }
 
-.intro-title {
-  text-align: center;
-  color: red;
-  font-weight: bolder;
-  font-size: 20pt;
-}
 
 .intro {
   text-align: center;
@@ -366,11 +348,6 @@ h6 {
 
 }
 
-/* .footer-main-item {
-  width: calc(25% - 20px);
-  margin-right: 25px;
-
-} */
 
 .footer-main-item>p {
   color: #ccc;
@@ -435,13 +412,6 @@ h6 {
   color: wheat;
 }
 
-.instagram-item {
-  width: calc(33.33% - 5px);
-  height: 100px;
-  overflow: hidden;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
 
 .footer-secondary {
   background-color: #111111;
@@ -451,34 +421,6 @@ h6 {
   padding: 26px 110px 30px 110px;
 }
 
-.shop-enterprise {
-  display: flex;
-  align-items: center;
-}
-
-.shop-business {
-  margin-right: 150px;
-}
-
-.shop-business li {
-  margin-bottom: 8px;
-}
-
-.shop-business li a {
-  text-decoration: none;
-  color: #646464;
-  font-size: 13px;
-}
-
-.shop-license {
-  display: flex;
-}
-
-.shop-license img {
-  max-width: 250px;
-  margin-right: 18px;
-  object-fit: cover;
-}
 
 .shop-copyright {
   color: #888;
@@ -826,13 +768,109 @@ h6 {
   text-decoration: none;
 }
 
-.text-blog :hover{
+.text-blog :hover {
   color: blue;
   font-size: 20pt;
   font-weight: 500;
   text-decoration: none;
 }
 
-.header-bannerhocphi{
+.header-bannerhocphi {
   text-align: center;
+}
+
+/* Hocphi */
+.header-bannerhocphi>img {
+  margin-left: 150px;
+  ;
+}
+
+.title-hocphi {
+  text-align: center;
+}
+
+.porto-u-main-heading {
+  text-align: center;
+}
+
+.pricing-table .plan {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pricing-table-flat .plan h3 {
+  background: #f1f1f1;
+  color: #000 !important;
+}
+
+.pricing-table {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.pricing-table .price {
+  font: bold 25px "Roboto";
+  line-height: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.pricing-table h3 strong {
+  font-weight: inherit;
+}
+
+.pricing-table h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+  padding: 20px;
+  letter-spacing: normal;
+}
+
+
+.btn-modern {
+  text-transform: uppercase;
+  font-size: .8em;
+  padding: 1.1143em 2.1429em;
+  font-weight: 600;
+}
+
+.btn-borders {
+  padding: 0.483rem 1.0625rem;
+  border-width: 2px;
+}
+
+
+.btn-primary {
+  border-color: #CCC;
+  background-color: #CCC;
+  border-color: #CCC #CCC #b3b3b3;
+  color: #FFF;
+}
+
+a.btn.btn-modern.btn-borders {
+  border-color: #000;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-bottom: 25px;
+  letter-spacing: .05em;
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 18%);
+}
+
+.pricing-table.pricing-table-flat .btn-bottom {
+  margin-top: 30px;
+}
+
+.btn-borders.btn-primary {
+  background: transparent;
+  border-color: #43a47b;
+  color: #43a47b;
+}
+
+.btn-borders.btn-primary:hover {
+  background: transparent;
 }

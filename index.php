@@ -1,5 +1,7 @@
    <?php
 
+   session_start();
+
     include_once "dao/pdo.php";
     include_once "dao/user.php";
     include_once "view/header.php";
@@ -116,10 +118,42 @@
                 include_once "view/sig-in.php";
                 break;
 
+
+
             case 'dangnhap':
+
+              if(isset($_POST['login']) && ($_POST['login'])) {
+
+               $name = $_POST['name_user'];
+               $pass = $_POST['pass_user'];
+
+               $check_user = check_user($name, $pass);
+
+               // extract($check_user);
+
+
+               if(is_array($check_user)) {
+
+                  $_SESSION['info_user'] = $check_user;  
+                  header('location: index.php');
+                  extract($check_user);
+                  $thongbao = "✔️ Đăng ký thành công";
+               }else{
+                  $thongbao = "Tài khoản không tồn tại! Kiểm tra lại";
+               }
+
+              }
+
+
                 include_once "view/log-in.php";
                 break;
-            
+
+
+            case 'dangxuat':
+               session_unset();
+               header("location: index.php");
+               
+               break;
             
             default:
                 require_once "view/home.php";

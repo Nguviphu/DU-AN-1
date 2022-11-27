@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./public/image/LogoES.png" />
   <title>TRUNG TÂM ANH NGỮ ESILK</title>
   <link rel="stylesheet" href="./public/css/reset.css" />
   <link rel="stylesheet" href="./public/css/style.css" />
@@ -28,7 +29,42 @@
             TRUNG TÂM ANH NGỮ ESILK
           </h1>
 
-          <!-- header-user -->
+
+
+          <div class="header-user">
+          <?php
+              if (isset($_SESSION['info_user'])) {
+              extract($_SESSION['info_user']);
+              $image = "./public/image/user" .$image;
+              ?>
+            <i class="fa fa-user header-icon">
+              <!-- header-dropdown -->
+              <div class="header-dropdown-content">
+              <div class="user-use" style="width: 500px;">
+              <h5>Xin chào <span style="font-size: 18px; text-transform: uppercase; color: #C31D39;"><?=$name ?></span></h5>
+              </div>
+              <a href="#" class="header-dropdown-link">Đổi mật khẩu</a>
+              <a href="index.php?ctrl=dangxuat" class="header-dropdown-link">Đăng xuất</a>
+              <a href="#" class="header-dropdown-link">Cập nhật tài khoản</a>                
+              </div>
+            </i>
+            <span class="header-text">Tài khoản</span>
+            <i class="fa-solid fa-chevron-down header-icon"></i>
+          </div>
+
+
+
+
+
+
+
+          <?php
+
+              }else {
+
+
+            ?>
+
           <div class="header-user">
             <i class="fa fa-user header-icon">
               <!-- header-dropdown -->
@@ -40,6 +76,15 @@
             <span class="header-text">Tài khoản</span>
             <i class="fa-solid fa-chevron-down header-icon"></i>
           </div>
+
+
+            <?php
+              }
+            ?>
+
+         
+          <!-- header-user -->
+          
         </div>
 
         <!-- header-controller -->
