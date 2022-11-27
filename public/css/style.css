@@ -76,18 +76,6 @@ h6 {
   margin-right: 10px;
 }
 
-.header-user-image {
-  position: absolute;
-  top: 50%;
-  right: 95px;
-  transform: translateY(-50%);
-  width: 100%;
-  max-width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  object-fit: cover;
-  display: inline-block;
-}
 
 /* Dropdown Content (Hidden by Default) */
 .header-dropdown-content {
@@ -279,12 +267,6 @@ h6 {
   font-size: 15pt;
 }
 
-.intro-title {
-  text-align: center;
-  color: red;
-  font-weight: bolder;
-  font-size: 20pt;
-}
 
 .intro {
   text-align: center;
@@ -366,11 +348,6 @@ h6 {
 
 }
 
-/* .footer-main-item {
-  width: calc(25% - 20px);
-  margin-right: 25px;
-
-} */
 
 .footer-main-item>p {
   color: #ccc;
@@ -435,13 +412,6 @@ h6 {
   color: wheat;
 }
 
-.instagram-item {
-  width: calc(33.33% - 5px);
-  height: 100px;
-  overflow: hidden;
-  margin-right: 5px;
-  margin-bottom: 5px;
-}
 
 .footer-secondary {
   background-color: #111111;
@@ -451,34 +421,6 @@ h6 {
   padding: 26px 110px 30px 110px;
 }
 
-.shop-enterprise {
-  display: flex;
-  align-items: center;
-}
-
-.shop-business {
-  margin-right: 150px;
-}
-
-.shop-business li {
-  margin-bottom: 8px;
-}
-
-.shop-business li a {
-  text-decoration: none;
-  color: #646464;
-  font-size: 13px;
-}
-
-.shop-license {
-  display: flex;
-}
-
-.shop-license img {
-  max-width: 250px;
-  margin-right: 18px;
-  object-fit: cover;
-}
 
 .shop-copyright {
   color: #888;
@@ -826,19 +768,28 @@ h6 {
   text-decoration: none;
 }
 
-.text-blog :hover{
+.text-blog :hover {
   color: blue;
   font-size: 20pt;
   font-weight: 500;
   text-decoration: none;
 }
 
-.header-bannerhocphi{
+.header-bannerhocphi {
   text-align: center;
 }
 
-/* .user-use > span{
-  float: left;
-  margin-left: 180px;
-  /* margin-top: -20px; */
-} */
+/* Hocphi */
+.header-bannerhocphi>img {
+  margin-left: 150px;
+  ;
+}
+
+.title-hocphi {
+  text-align: center;
+}
+
+.porto-u-main-heading {
+  text-align: center;
+}
+
