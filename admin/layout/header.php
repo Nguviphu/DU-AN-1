@@ -49,6 +49,25 @@
                     </ul>
                 </li>
 
+                <!-- Lớp Học -->
+
+                <li>
+                    <a href="#classes" data-bs-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
+                        <i class="fas fa-angle-right float-xl-right"></i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="classes">
+                        <li>
+                            <a href="">
+                                <i class="fas fa-plus"></i>Thêm lớp học</a>
+                        </li>
+                        <li>
+                            <a href="index.php?ctr=list_subjects">
+                                <i class="fas fa-list-ul"></i>Danh sách lớp học</a>
+                        </li>
+                    </ul>
+                </li>
+
                 <!-- Lịch học -->
 
                 <li>

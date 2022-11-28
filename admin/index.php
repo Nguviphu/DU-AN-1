@@ -1,7 +1,7 @@
 <?php
     require "../dao/pdo.php";
     require "../dao/pdo_course.php";
-    require "header.php";
+    require "layout/header.php";
 
     if(isset($_GET['ctr']) && ($_GET['ctr']!="")) {
         $ctr = $_GET['ctr'];
@@ -52,8 +52,8 @@
                 
     }
     }else{
-        require "home.php";
+        require "layout/home.php";
     }
-    require "footer.php";
+    require "layout/footer.php";
 
 ?>
