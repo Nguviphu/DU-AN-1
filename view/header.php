@@ -109,6 +109,7 @@
 
 
           <!-- header-login -->
+
           <div class="header-act-icon">
             <a href="#">
               <i class="fa-solid far fa-phone-alt"></i> HOTLINE
@@ -127,7 +128,7 @@
               <a href="index.php?ctrl=introduce" class="header-link">Giới thiệu</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link">Khoá học</a>
+              <a href="index.php?ctrl=khoahoc" class="header-link">Khoá học</a>
             </li>
             <li class="header-item">
               <a href="#" class="header-link">Lịch học</a>

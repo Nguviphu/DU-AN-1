@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
     <title>Trung tâm ANH NGỮ ESILK</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/public/css/bootstrap.min.css" type="text/css" />
@@ -65,6 +65,7 @@
                     <a href="/public/admin/danhsach_hocvien.html"><i class="fas fa-user"></i>Quản lý học viên</a>
                 </li>
 
+
                 <!-- Bình luận -->
                 <li>
                     <a href="/public/admin/binhluan.html"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
@@ -118,44 +119,55 @@
             </nav>
             <!-- end of navbar navigation -->
 
-            <!-- content -->
+
             <div class="content">
                 <div class="container">
-                    <div class="cards row mt-5">
-                        <div class="card-single col d-flex justify-content-around bg-success text-white py-5 ml-3">
-                            <div>
-                                <h1 class="font-weight-bold"></h1>
-                                <span>Quản lý môn học</span>
-                            </div>
-                            <div>
-                                <i class="fas fa-th-list" style="font-size: 80px"></i>
-                            </div>
-                        </div>
-                        <div class="card-single col d-flex justify-content-around bg-warning text-white py-5 ml-3">
-                            <div>
-                                <h1 class="font-weight-bold"></h1>
-                                <span>Quản lý lịch học</span>
-                            </div>
-                            <div>
-                                <i class="fas fa-table" style="font-size: 80px"></i>
-                            </div>
-                        </div>
-                        <div class="card-single col d-flex justify-content-around bg-danger text-white py-5 ml-3">
-                            <div>
-                                <h1 class="font-weight-bold"></h1>
-                                <span>Giáo viên & Học viên</span>
-                            </div>
-                            <div>
-                                <i class="fas fa-users" style="font-size: 80px"></i>
-                            </div>
-                        </div>
-                        <div class="card-single col d-flex justify-content-around bg-primary text-white py-5 ml-3">
-                            <div>
-                                <h1 class="font-weight-bold"></h1>
-                                <span>Bình luận & Đánh giá</span>
-                            </div>
-                            <div>
-                                <i class="fas fa-comments" style="font-size: 80px"></i>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="card">
+                                <div class="card-header text-center bg-danger text-white text-uppercase">
+                                    Cập nhật lớp học
+                                </div>
+                                <div class="card-body">
+                                    <form action="#" method="POST" id="edit_lophoc">
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Mã lớp</label>
+                                            <input type="text" name="class_code" class="form-control"
+                                                placeholder="VD: CBxx or NCxx" />
+
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Giáo viên</label>
+                                            <input type="text" name="teacher" class="form-control"
+                                                placeholder="Nhập tên Giáo Viên" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Môn học</label>
+                                            <input type="text" name="subject" class="form-control"
+                                                placeholder="Cơ bản or Nâng cao" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Lộ trình</label>
+                                            <input type="text" name="number_session" class="form-control"
+                                                placeholder="Số buổi" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Lịch trình</label>
+                                            <input type="text" name="schedule_id" class="form-control" />
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Trạng thái</label>
+                                            <input type="text" name="status" class="form-control" />
+                                        </div>
+                                        <div class="mb-3 text-center">
+                                            <input type="reset" value="Nhập lại" class="btn btn-danger mr-3" />
+                                            <input type="submit" name="" value="Cập nhật"
+                                                class="btn btn-primary mr-3" />
+                                            <a href="/public/admin/danhsach_khoahoc.html"><input type="button"
+                                                    class="btn btn-success" value="Danh sách" /></a>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -163,6 +175,7 @@
             </div>
             <!-- end of content -->
 
+            <!-- Js -->
             <script src="/public/js/jquery-3.6.0.min.js"></script>
             <script src="/public/js/bootstrap.bundle.min.js"></script>
             <script src="/public/js/main.js"></script>
