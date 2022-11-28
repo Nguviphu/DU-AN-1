@@ -25,26 +25,25 @@
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>
-                    <a href="#"><i class="fas fa-store"></i>Xem trang web</a>
+                    <a href="../index.php"><i class="fas fa-store"></i>Xem trang web</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-home"></i>Trang chủ</a>
+                    <a href=""><i class="fas fa-home"></i>Trang chủ</a>
                 </li>
 
                 <!-- Môn học -->
                 <li>
-                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
+                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
                     <ul class="collapse list-unstyled" id="subjects">
                         <li>
-                            <a href="#">
-                                <i class="fas fa-plus"></i>Thêm môn học</a>
+                            <a href="../admin/index.php?act=addlophoc">
+                                <i class="fas fa-plus"></i>Thêm lớp học</a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fas fa-list-ul"></i>Danh sách môn học</a>
+                            <a href="../admin/index.php?act=list">
+                                <i class="fas fa-list-ul"></i>Danh sách lớp học</a>
                         </li>
                     </ul>
                 </li>
@@ -52,8 +51,7 @@
                 <!-- Lịch học -->
 
                 <li>
-                    <a href="#schedule" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i
-                            class="fas fa-table"></i>Quản lý lịch học
+                    <a href="#schedule" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-table"></i>Quản lý lịch học
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
                     <ul class="collapse list-unstyled" id="schedule">
@@ -66,23 +64,6 @@
                         </li>
                     </ul>
                 </li>
-
-
-                <!-- Giáo viên -->
-
-                <li>
-<a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
-                        <i class="fas fa-user-friends"></i>Quản lý giáo viên
-                        <i class="fas fa-angle-right float-xl-right"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="teacher">
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-list-ul"></i>Danh sách giáo viên</a>
-                        </li>
-                    </ul>
-                </li>
-
 
                 <!-- Học viên -->
 
@@ -124,15 +105,14 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item dropdown">
                             <div class="nav-dropdown">
-                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary"
-                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
                                     <i class="fas fa-user"></i> <span>Admin</span>
                                     <i style="font-size: 0.8em" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
                                         <li>
-                                        <a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
+                                            <a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
                                                 sơ</a>
                                         </li>
                                         <li>

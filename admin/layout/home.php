@@ -5,7 +5,7 @@
                         <div class="card-single col d-flex justify-content-around bg-success text-white py-5 ml-3">
                             <div>
                                 <h1 class="font-weight-bold"></h1>
-                                <span>Quản lý môn học</span>
+                                <span>Quản lớp môn học</span>
                             </div>
                             <div>
                                 <i class="fas fa-th-list" style="font-size: 80px"></i>
