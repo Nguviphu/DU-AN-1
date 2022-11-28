@@ -19,7 +19,6 @@ if (isset($_GET['act'])) {
             include "./classes/add_class.php";
             break;
 
-
         case 'listlophoc':
             $classes = class_list();
             include './classes/list.php';
