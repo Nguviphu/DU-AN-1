@@ -793,3 +793,111 @@ h6 {
   text-align: center;
 }
 
+.pricing-table .plan {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.pricing-table-flat .plan h3 {
+  background: #f1f1f1;
+  color: #000 !important;
+}
+
+.pricing-table {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.pricing-table .price {
+  font: bold 25px "Roboto";
+  line-height: 1;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.pricing-table h3 strong {
+  font-weight: inherit;
+}
+
+.pricing-table h3 {
+  font-size: 1.3em;
+  font-weight: 400;
+  padding: 20px;
+  letter-spacing: normal;
+}
+
+
+.btn-modern {
+  text-transform: uppercase;
+  font-size: .8em;
+  padding: 1.1143em 2.1429em;
+  font-weight: 600;
+}
+
+.btn-borders {
+  padding: 0.483rem 1.0625rem;
+  border-width: 2px;
+}
+
+
+.btn-primary {
+  border-color: #CCC;
+  background-color: #CCC;
+  border-color: #CCC #CCC #b3b3b3;
+  color: #FFF;
+}
+
+a.btn.btn-modern.btn-borders {
+  border-color: #000;
+  color: #000;
+  font-size: 16px;
+  padding: 10px 30px;
+  margin-bottom: 25px;
+  letter-spacing: .05em;
+  box-shadow: 0 0.1em 0.2em rgb(0 0 0 / 18%);
+}
+
+.pricing-table.pricing-table-flat .btn-bottom {
+  margin-top: 30px;
+}
+
+.btn-borders.btn-primary {
+  background: transparent;
+  border-color: #43a47b;
+  color: #43a47b;
+}
+
+.btn-borders.btn-primary:hover {
+  background: transparent;
+}
+
+/* Khoá học */
+.title-khoahoc>a {
+  color: black;
+  text-decoration: none !important;
+}
+
+.course-item {
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 2px 2px 10px #cecece;
+  margin-top: 30px;
+  min-height: 295px;
+}
+
+.sale_off_strong {
+  color: red;
+}
+
+.pull-right {
+  float: right;
+}
+
+.text-red {
+  color: red;
+}

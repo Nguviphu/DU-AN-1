@@ -5,13 +5,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <title>Trung tâm ANH NGỮ ESILK</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="../public/css/bootstrap.min.css" type="text/css" />
-    <link rel="stylesheet" href="../public/css/all.min.css" type="text/css" />
-    <link rel="stylesheet" href="../public/css/dashboard.css" type="text/css" />
-    <link rel="stylesheet" href="../public/css/custom.css" type="text/css" />
+    <link rel="stylesheet" href="/public/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="/public/css/all.min.css" type="text/css" />
+    <link rel="stylesheet" href="/public/css/dashboard.css" type="text/css" />
+    <link rel="stylesheet" href="/public/css/custom.css" type="text/css" />
 </head>
 
 <body>
@@ -20,105 +20,74 @@
         <nav id="sidebar">
             <div class="sidebar-header">
                 <a href="#">
-                    <img src="../public/image/LogoES.png" alt="logo" class="img-fluid logo">
+                    <img src="/public/image/LogoES.png" alt="logo" class="img-fluid logo">
                 </a>
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>
-                    <a href="#"><i class="fas fa-store"></i>Xem trang web</a>
+                    <a href="/public/index.html"><i class="fas fa-store"></i>Xem trang web</a>
                 </li>
                 <li>
-                    <a href="#"><i class="fas fa-home"></i>Trang chủ</a>
+                    <a href="/admin/layout/layout.html"><i class="fas fa-home"></i>Trang chủ</a>
                 </li>
 
                 <!-- Môn học -->
                 <li>
-<<<<<<< HEAD
-                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
-=======
                     <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
->>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
+                        class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý khoá học
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
                     <ul class="collapse list-unstyled" id="subjects">
                         <li>
-                            <a href="#">
-                                <i class="fas fa-plus"></i>Thêm môn học</a>
+                            <a href="/public/admin/add_khoahoc.html">
+                                <i class="fas fa-plus"></i>Thêm khoá học</a>
                         </li>
                         <li>
-                            <a href="#">
-                                <i class="fas fa-list-ul"></i>Danh sách môn học</a>
+                            <a href="/public/admin/danhsach_khoahoc.html">
+                                <i class="fas fa-list-ul"></i>Danh sách khoá học</a>
                         </li>
                     </ul>
                 </li>
 
                 <!-- Lịch học -->
-
                 <li>
-                    <a href="#schedule" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i
-                            class="fas fa-table"></i>Quản lý lịch học
-                        <i class="fas fa-angle-right float-xl-right"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="schedule">
-                        <li>
-                            <a href="#"><i class="fas fa-plus"></i>Update lịch học</a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-list-ul"></i>Danh sách lịch học</a>
-                        </li>
-                    </ul>
+                    <a href="/public/admin/lichhoc.html"><i class="fas fa-table"></i>Quản lý lịch học</a>
                 </li>
 
-
-                <!-- Giáo viên -->
-
+                <!-- Lớp học -->
                 <li>
-<<<<<<< HEAD
-                    <a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
-=======
-<a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
->>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
-                        <i class="fas fa-user-friends"></i>Quản lý giáo viên
+                    <a href="#classes" data-bs-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
-                    <ul class="collapse list-unstyled" id="teacher">
+                    <ul class="collapse list-unstyled" id="classes">
                         <li>
                             <a href="#">
-                                <i class="fas fa-list-ul"></i>Danh sách giáo viên</a>
+                                <i class="fas fa-plus"></i>Update lớp học</a>
+                            <a href="">
+                                <i class="fas fa-trash-alt"></i>Xoá lớp học</a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fas fa-list-ul"></i>Danh sách lớp học</a>
                         </li>
                     </ul>
                 </li>
 
 
                 <!-- Học viên -->
+                <li>
+                    <a href="/public/admin/danhsach_hocvien.html"><i class="fas fa-user"></i>Quản lý học viên</a>
+                </li>
+
+                <!-- Bình luận -->
+                <li>
+                    <a href="/public/admin/binhluan.html"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
+                </li>
 
                 <li>
-                    <a href="#student" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
-                        <i class="fas fa-user-friends"></i>Quản lý học viên
-                        <i class="fas fa-angle-right float-xl-right"></i>
-                    </a>
-                    <ul class="collapse list-unstyled" id="student">
-                        <li>
-                        <li>
-                            <a href="#">
-                                <i class="fas fa-plus"></i>Thêm học viên</a>
-                        </li>
-                        <a href="#">
-                            <i class="fas fa-list-ul"></i>Danh sách học viên</a>
+                    <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
                 </li>
-            </ul>
-            </li>
-
-            <!-- Bình luận -->
-            <li>
-                <a href="#"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
-            </li>
-
-            <li>
-                <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
-            </li>
             </ul>
         </nav>
 
@@ -132,23 +101,15 @@
                     <ul class="nav navbar-nav ml-auto">
                         <li class="nav-item dropdown">
                             <div class="nav-dropdown">
-<<<<<<< HEAD
-                                <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary" data-bs-toggle="dropdown" aria-expanded="false">
-=======
                                 <a href="#" id="nav2" class="nav-item nav-link dropdown-toggle text-secondary"
                                     data-bs-toggle="dropdown" aria-expanded="false">
->>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
                                     <i class="fas fa-user"></i> <span>Admin</span>
                                     <i style="font-size: 0.8em" class="fas fa-caret-down"></i>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
                                         <li>
-<<<<<<< HEAD
                                             <a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
-=======
-<a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
->>>>>>> 8aaaa3433d6b31c87c33ecd420ab318e0184b438
                                                 sơ</a>
                                         </li>
                                         <li>

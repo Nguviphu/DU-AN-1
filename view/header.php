@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,10 +11,8 @@
   <link rel="stylesheet" href="./public/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
-    rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
 </head>
 
@@ -32,33 +29,33 @@
 
 
 
-              <?php
+          <?php
 
-              if (isset($_SESSION['info_user'])) {
-              extract($_SESSION['info_user']);
-
-              
-
-              ?>
-
-
-          <div class="user-use" style="width: 500px;">
-          <h5>Xin chào học viên: <span style="font-size: 18px; text-transform: uppercase; color: #C31D39;"><?=$name ?></span></h5>
-          </div>
+          if (isset($_SESSION['info_user'])) {
+            extract($_SESSION['info_user']);
 
 
 
-          <div class="header-user">
-            <i class="fa fa-user header-icon">
-              <!-- header-dropdown -->
-              <div class="header-dropdown-content">
-                <a href="index.php?ctrl=dangxuat" class="header-dropdown-link">Đăng xuất</a>
-                
-              </div>
-            </i>
-            <span class="header-text">Tài khoản</span>
-            <i class="fa-solid fa-chevron-down header-icon"></i>
-          </div>
+          ?>
+
+
+            <div class="user-use" style="width: 500px;">
+              <h5>Xin chào học viên: <span style="font-size: 18px; text-transform: uppercase; color: #C31D39;"><?= $name ?></span></h5>
+            </div>
+
+
+
+            <div class="header-user">
+              <i class="fa fa-user header-icon">
+                <!-- header-dropdown -->
+                <div class="header-dropdown-content">
+                  <a href="index.php?ctrl=dangxuat" class="header-dropdown-link">Đăng xuất</a>
+
+                </div>
+              </i>
+              <span class="header-text">Tài khoản</span>
+              <i class="fa-solid fa-chevron-down header-icon"></i>
+            </div>
 
 
 
@@ -68,31 +65,31 @@
 
           <?php
 
-              }else {
+          } else {
 
 
-            ?>
+          ?>
 
-          <div class="header-user">
-            <i class="fa fa-user header-icon">
-              <!-- header-dropdown -->
-              <div class="header-dropdown-content">
-                <a href="index.php?ctrl=dangky" class="header-dropdown-link">Đăng ký</a>
-                <a href="index.php?ctrl=dangnhap" class="header-dropdown-link">Đăng nhập</a>
-              </div>
-            </i>
-            <span class="header-text">Tài khoản</span>
-            <i class="fa-solid fa-chevron-down header-icon"></i>
-          </div>
+            <div class="header-user">
+              <i class="fa fa-user header-icon">
+                <!-- header-dropdown -->
+                <div class="header-dropdown-content">
+                  <a href="index.php?ctrl=dangky" class="header-dropdown-link">Đăng ký</a>
+                  <a href="index.php?ctrl=dangnhap" class="header-dropdown-link">Đăng nhập</a>
+                </div>
+              </i>
+              <span class="header-text">Tài khoản</span>
+              <i class="fa-solid fa-chevron-down header-icon"></i>
+            </div>
 
 
-            <?php
-              }
-            ?>
+          <?php
+          }
+          ?>
 
-         
+
           <!-- header-user -->
-          
+
         </div>
 
         <!-- header-controller -->
@@ -112,17 +109,10 @@
 
 
           <!-- header-login -->
-          <div class="header-act">
-            <div class="header-act-icon">
-              <a href="#">
-                <i class="fa fa-user header-user-icon"></i>
-              </a>
-            </div>
-            <div class="header-act-icon">
-              <a href="#">
-                <i class="fa-solid far fa-phone-alt"></i> HOTLINE
-              </a>
-            </div>
+          <div class="header-act-icon">
+            <a href="#">
+              <i class="fa-solid far fa-phone-alt"></i> HOTLINE
+            </a>
           </div>
         </div>
 
