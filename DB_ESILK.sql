@@ -22,6 +22,7 @@ CREATE TABLE `student` (
   `name` varchar(255),
   `email` varchar(255),
   `image` varchar(255),
+  `password` varchar(299),
   `toeic` int
 );
 
