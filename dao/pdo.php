@@ -70,7 +70,7 @@ function pdo_execute_return_lastInsertId($sql){
             $connect = pdo_get_connect();
             $query = $connect->prepare($sql);
             $query->execute($sql_args);
-            $qmd = $query->fetchAll();
+            $qmd = $query->fetchAll(PDO::FETCH_ASSOC);
             return $qmd;
         } catch (PDOException $e) {
             throw $e;
