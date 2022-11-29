@@ -159,8 +159,10 @@
                $id_user = $_SESSION['info_user']['id'];
                $id_lop= $_POST['id_lop'];
                $id_room=1;
-               $mess="Đã Đăng Ký Thành Công";
+               // $mess="Đã Đăng Ký Thành Công";
+
                dklop($id_lop,$id_user,$id_room);
+               header('location: index.php');
             }
             $classes = class_list();
             include 'view/danhsachlop.php';
@@ -173,6 +175,8 @@
       include_once "view/home.php";
    }
 
+
+   
 
 
 
