@@ -1,6 +1,6 @@
 <?php 
-  if(is_array($edit)){
-     extract($edit);
+  if(is_array($loadone_monHoc)){
+     extract($loadone_monHoc);
   }
 ?>
               
@@ -13,7 +13,7 @@
                                     Thêm khoá học
                                 </div>
                                 <div class="card-body">
-                                    <form action="index.php?ctr=update_subjects" method="POST" id="add_khoahoc">
+                                    <form action="index.php?ctrl=update_subjects" method="POST" id="add_khoahoc">
                                         <div class="mb-3">
                                             <label for="" class="form-label">Mã khoá học</label>
                                             <input type="text" name="" class="form-control" disabled  value="<?php echo $id ?>"/>

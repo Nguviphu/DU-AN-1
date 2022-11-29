@@ -26,7 +26,7 @@
                                             <input type="reset" value="Nhập lại" class="btn btn-danger mr-3" />
                                             <input type="submit" name="btn_add_subjects" value="Thêm mới"
                                                 class="btn btn-primary mr-3" />
-                                            <a href="index.php?ctr=list_subjects"><input type="button" class="btn btn-success"
+                                            <a href="index.php?ctrl=list_subjects"><input type="button" class="btn btn-success"
                                                     value="Danh sách" /></a>
                                         </div>
                                     </form>

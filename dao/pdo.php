@@ -1,78 +1,99 @@
 <?php
+// Hàm kết nối CSDL
+function pdo_get_connect(){
+    $hostname = "localhost";
+    $dbname = "db_esilk";
+    $username = "root";
+    $password = "";
 
-// tạo kết nối từ project php sang mysql
-function pdo_get_connection(){
-    $dburl = "mysql:host=localhost;dbname=db_esilk;charset=utf8";
-    $username = 'root';
-    $password = '';
-
-    $conn = new PDO($dburl, $username, $password);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    return $conn;
-}
-
-function pdo_execute($sql){
-    $sql_args = array_slice(func_get_args(), 1);
-    try{
-        $conn = pdo_get_connection();
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
-    }
-    catch(PDOException $e){
-        throw $e;
-    }
-    finally{
-        unset($conn);
-    }
-}
-
-//Lấy ID vừa insert bằng PHP
-function pdo_execute_lastInsertId($sql){
-    $sql_args = array_slice(func_get_args(),1);
     try {
-         $conn = pdo_get_connection();
-         $stmt = $conn->prepare($sql);
-         $stmt->execute($sql_args);
-         return $conn->lastInsertId();
+        $connect = new PDO("mysql:host=$hostname;dbname=$dbname;charset=utf8", $username, $password);
+        $connect->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+        return $connect;
     } catch (PDOException $e) {
-        throw $e;
+        echo "Lỗi kết nối: ".$e->getMessage();
     }
-    finally{
-        unset($conn);
     }
+
+
+// Hàm thực thi CSDL
+
+    function pdo_execute($sql){
+        $sql_args = array_slice(func_get_args(), 1);
+
+        try {
+           $connect = pdo_get_connect();
+           $query = $connect->prepare($sql);
+           $query->execute($sql_args);
+        } catch (PDOException $e) {
+           throw $e;
+        } finally{
+            unset($connect);
+        }
+
+
+    }
+
+// Hàm trả về id bill
+
+
+function pdo_execute_return_lastInsertId($sql){
+    $sql_args = array_slice(func_get_args(), 1);
+
+    try {
+       $connect = pdo_get_connect();
+       $query = $connect->prepare($sql);
+       $query->execute($sql_args);
+       return $connect -> lastInsertId();
+    } catch (PDOException $e) {
+       throw $e;
+    } finally{
+        unset($connect);
+    }
+
+
 }
 
-function pdo_query($sql){
-    $sql_args = array_slice(func_get_args(),1);
-    try{
-        $conn = pdo_get_connection();
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
-        $roms = $stmt->fetchAll();
-        return $roms;
+// Hàm truy vấn nhiều dữ liệu
+
+    function pdo_query($sql){
+        $sql_args = array_slice(func_get_args(), 1);
+
+        try {
+            $connect = pdo_get_connect();
+            $query = $connect->prepare($sql);
+            $query->execute($sql_args);
+            $qmd = $query->fetchAll(PDO::FETCH_ASSOC);
+            return $qmd;
+        } catch (PDOException $e) {
+            throw $e;
+         } finally{
+             unset($connect);
+         }
     }
-    catch (PDOException $e){
-        throw $e;
-    }
-    finally{
-        unset($conn);
-    }
-}
+
+
+// Hàm truy vấn một dữ liệu
+
 
 function pdo_query_one($sql){
-    $sql_args = array_slice(func_get_args(),1);
-    try{
-        $conn = pdo_get_connection();
-        $stmt = $conn->prepare($sql);
-        $stmt->execute($sql_args);
-        $rom = $stmt->fetch(PDO::FETCH_ASSOC);
-        return $rom;
-    }
-    catch (PDOException $e){
+    $sql_args = array_slice(func_get_args(), 1);
+
+    try {
+        $connect = pdo_get_connect();
+        $query = $connect->prepare($sql);
+        $query->execute($sql_args);
+        $qmd = $query->fetch(PDO::FETCH_ASSOC);
+        return $qmd;
+    } catch (PDOException $e) {
         throw $e;
-    }
-    finally{
-        unset($conn);
-    }
+     } finally{
+         unset($connect);
+     }
 }
+
 ?>
+
+
+
