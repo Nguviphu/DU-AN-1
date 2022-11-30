@@ -30,8 +30,7 @@
                 </li>
                 <!-- Môn học -->
                 <li>
-                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
+                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
                     <ul class="collapse list-unstyled" id="subjects">
@@ -49,8 +48,7 @@
                 <!-- Lớp Học -->
 
                 <li>
-                    <a href="#classes" data-bs-toggle="collapse" aria-expanded="false"
-                        class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
+                    <a href="#classes" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
                     <ul class="collapse list-unstyled" id="classes">
@@ -106,8 +104,8 @@
                     </a>
                     <ul class="collapse list-unstyled" id="student">
                         <li>
-                        <a href="#">
-                            <i class="fas fa-list-ul"></i>Danh sách học viên</a>
+                            <a href="#">
+                                <i class="fas fa-list-ul"></i>Danh sách học viên</a>
                         </li>
                     </ul>
                 </li>
@@ -150,7 +148,7 @@
                                         </li>
                                         <div class="dropdown-divider"></div>
                                         <li>
-                                            <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
+                                            <a href="index.php?ctrl=dangxuat" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
                                         </li>
                                     </ul>
                                 </div>

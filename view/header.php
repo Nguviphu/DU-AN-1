@@ -137,7 +137,7 @@
               <a href="index.php?ctrl=introduce" class="header-link">Giới thiệu</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link">Khoá học</a>
+              <a href="index.php?ctrl=dklop" class="header-link">Khoá học</a>
             </li>
             <li class="header-item">
               <a href="#" class="header-link">Lịch học</a>
