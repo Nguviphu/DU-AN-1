@@ -51,7 +51,7 @@
 
 
                     <div class="form-group">
-                        <input type="submit" name="subscribe" value="Đăng ký" style="background-color: blue; color: white;">
+                        <input type="submit" class="form-login-btn" name="subscribe" value="Đăng ký">
                     </div>
 
                     <div class="form-signin">

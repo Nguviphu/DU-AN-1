@@ -19,7 +19,7 @@ function xoa_lophoc($id)
     return pdo_execute($sql);
 }
 
-function all_lophoc($order = "ASC")
+function all_lophoc($order = "DESC")
 {
     $sql = "SELECT * FROM classes ORDER BY id $order";
     $classes = pdo_query($sql);
@@ -33,11 +33,11 @@ function lay_lophoc_theo_id($id)
     return $lophoc;
 }
 
-// function update_lophoc($id, $class_code, $subject, $teacher, $number_session, $schedule, $status)
-// {
-//     $sql = "UPDATE classes SET `class_code`, `subject`, `teacher`, `number_session`, `schedule_id`, `status`  = '$class_code', '$subject','$teacher','$number_session','$schedule,'$status' WHERE id = $id";
-//     pdo_query($sql);
-// }
+function update_lophoc($id, $class_code, $subject, $teacher, $number_session, $schedule, $status)
+{
+    $sql = "UPDATE classes SET `class_code`, `subject`, `teacher`, `number_session`, `schedule_id`, `status`  = '$class_code', '$subject','$teacher','$number_session','$schedule,'$status' WHERE id = $id";
+    pdo_execute($sql);
+}
 
 function dklop($id_lop, $id_student, $id_room)
 {

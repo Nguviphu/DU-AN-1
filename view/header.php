@@ -131,7 +131,7 @@
               <a href="index.php?ctrl=khoahoc" class="header-link">Khoá học</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link">Lịch học</a>
+              <a href="index.php?ctrl=dklop" class="header-link">Lịch học</a>
             </li>
             <li class="header-item">
               <a href="index.php?ctrl=blog" class="header-link">Blog</a>

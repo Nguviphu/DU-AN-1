@@ -33,7 +33,7 @@
 
 
 
-                        <input type="submit" name="login" value="Đăng nhập">
+                        <input type="submit" name="login" class="form-login-btn" value="Đăng nhập">
                     </div>
                     <div class="form-singup">
                         <span class="form-signup-text">Bạn chưa có tài khoản? <a href="index.php?ctrl=dangky">Đăng

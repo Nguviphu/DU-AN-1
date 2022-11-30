@@ -8,12 +8,12 @@ if (isset($_GET['act'])) {
         case 'addlophoc':
             if (isset($_POST['subscribe']) && ($_POST['subscribe'])) {
                 $class_code = $_POST['class_code'];
-                    $teacher = $_POST['teacher'];
-                    $subject = $_POST['subject'];
-                    $number_session = $_POST['number_session'];
-                    $schedule = $_POST['schedule_id'];
-                    $status = $_POST['status'];
-                    add_class($class_code, $teacher, $subject, $number_session, $schedule, $status);
+                $teacher = $_POST['teacher'];
+                $subject = $_POST['subject'];
+                $number_session = $_POST['number_session'];
+                $schedule = $_POST['schedule_id'];
+                $status = $_POST['status'];
+                add_class($class_code, $teacher, $subject, $number_session, $schedule, $status);
                 $message = "✔️ Thêm thành công";
             }
             include "./classes/add_class.php";
@@ -37,24 +37,25 @@ if (isset($_GET['act'])) {
                 $id = $_GET['id'];
                 $lophoc = lay_lophoc_theo_id($id);
             }
-            include "./classes/update.php";
+            include "classes/update.php";
             break;
 
-        // case "updatelophoc";
-        //     if (isset($_POST['btn_update']) && ($_POST['btn_update'])) {
-        //         $id = $_POST['id'];
-        //         $class_code = $_POST['class_code'];
-        //         $subject = $_POST['subject'];
-        //         $teacher = $_POST['teacher'];
-        //         $number_session = $_POST['number_session'];
-        //         $schedule = $_POST['schedule_id'];
-        //         $status = $_POST['status'];
-        //         update_lophoc($id, $class_code, $subject, $teacher, $number_session, $schedule, $status);
-        //         $message = "Cập nhật thành công";
-        //     }
-        //     $classes = all_lophoc();
-        //     include "./classes/update.php";
-        //     break;
+        case "updatelophoc";
+            if (isset($_POST['btn_update']) && ($_POST['btn_update'])) {
+                $id = $_POST['id'];
+                $class_code = $_POST['class_code'];
+                $subject = $_POST['subject'];
+                $teacher = $_POST['teacher'];
+                $number_session = $_POST['number_session'];
+                $schedule = $_POST['schedule_id'];
+                $status = $_POST['status'];
+                update_lophoc($id, $class_code, $subject, $teacher, $number_session, $schedule, $status);
+                $message = "Cập nhật thành công";
+            }
+            $classes = all_lophoc();
+            include "classes/list.php";
+            break;
+            
         default:
             include "layout/home.php";
             break;

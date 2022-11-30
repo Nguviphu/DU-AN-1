@@ -33,8 +33,6 @@
         } finally{
             unset($connect);
         }
-
-
     }
 
 // Hàm trả về id bill

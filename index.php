@@ -139,8 +139,9 @@
             header("location: index.php");
 
             break;
+
          case 'dklop':
-            include 'dao/class_dao.php';
+            // include 'dao/class_dao.php';
             if (isset($_POST['id_lop'])) {
                $id_user = $_SESSION['info_user']['id'];
                $id_lop = $_POST['id_lop'];
@@ -149,7 +150,7 @@
                dklop($id_lop, $id_user, $id_room);
             }
             $classes = class_list();
-            include 'view/danhsachlop.php';
+            include_once 'view/danhsachlop.php';
             break;
          default:
             require_once "view/home.php";

@@ -1,3 +1,9 @@
+<?php
+if (is_array($lophoc)) {
+    extract($lophoc);
+}
+?>
+
 <div class="content">
     <div class="container">
         <div class="row">
@@ -10,31 +16,32 @@
                         <form action="index.php?act=updatelophoc" method="POST" id="edit_lophoc">
                             <div class="mb-3">
                                 <label for="" class="form-label">ID</label>
-                                <input type="text" name="ma_loai" class="form-control" readonly value="<?= $id ?>"/>
+                                <input type="text" name="ma_loai" class="form-control" readonly value="<?= $id ?>" />
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Mã lớp</label>
-                                <input type="text" name="class_code" class="form-control" required value="" />
+                                <input type="text" name="class_code" class="form-control" required value="<?= $class_code ?>" />
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Giáo viên</label>
-                                <input type="text" name="teacher" class="form-control" required value=""/>
+                                <input type="text" name="teacher" class="form-control" required value="<?= $teacher ?>" />
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Môn học</label>
-                                <input type="text" name="subject" class="form-control"  required value=""/>
+                                <input type="text" name="subject" class="form-control" required value="<?= $subject ?>" />
                             </div>
+
                             <div class="mb-3">
                                 <label for="" class="form-label">Lộ trình</label>
-                                <input type="text" name="number_session" class="form-control" required value=""/>
+                                <input type="text" name="number_session" class="form-control" required value="<?= $number_session ?>" />
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Lịch trình</label>
-                                <input type="text" name="schedule_id" class="form-control" />
+                                <input type="text" name="schedule_id" class="form-control" value="<?= $schedule_id ?>" />
                             </div>
                             <div class="mb-3">
                                 <label for="" class="form-label">Trạng thái</label>
-                                <input type="text" name="status" class="form-control" />
+                                <input type="text" name="status" class="form-control" value="<?= $status ?>" />
                             </div>
                             <div class="mb-3 text-center">
                                 <input type="reset" value="Nhập lại" class="btn btn-danger mr-3" />
