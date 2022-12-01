@@ -7,6 +7,7 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
     include_once "../dao/pdo_course.php";
     include_once "../dao/pdo.php";
     include_once "../dao/class_dao.php";
+    include_once "../dao/user.php";
     include_once "layout/header.php";
 
     if (isset($_GET['ctrl']) && ($_GET['ctrl']) != "") {
@@ -115,6 +116,114 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
                     header('location: login_admin.php');
                 }
                 break;
+
+                // =================Quản lý giáo viên==================
+            case 'list_giaovien':
+                $sql = "select * from danhmuc order by id desc";
+                $teacher = loadall_user();
+                include "tai-khoan/teacher/list_teacher.php";
+                break;
+
+            case 'delete_giaovien':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_user($_GET['id']);
+                }
+                $teacher = loadall_user();
+                include "tai-khoan/teacher/list_teacher.php";
+                break;
+
+            case 'edit_giaovien':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $load_one_teacher = loadone_user($_GET['id']);
+                }
+                include "tai-khoan/teacher/update_teacher.php";
+                break;
+
+            case 'update_teacher':
+                if (isset($_POST['btn_update_teacher']) && ($_POST['btn_update_teacher'])) {
+                    $id = $_POST['id'];
+                    $full_name = $_POST['full_name'];
+                    $user_name = $_POST['user_name'];
+                    $password = $_POST['pass'];
+                    $email = $_POST['email'];
+                    $phone = $_POST['phone'];
+                    update_user($id, $phone, $user_name, $full_name, $email, $password, $role);
+                }
+                $teacher = loadall_user();
+                include "tai-khoan/teacher/list_teacher.php";
+                break;
+                // =======================================================
+
+                // Quản lý tổng user
+            case 'list_user':
+                $sql = "select * from danhmuc order by id desc";
+                $load_all_user = loadall_user();
+                include "tai-khoan/tongHop_user/list_user.php";
+                break;
+            case 'delete_user':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_user($_GET['id']);
+                }
+                $load_all_user = loadall_user();
+                include "tai-khoan/tongHop_user/list_user.php";
+                break;
+            case 'edit_user':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $load_one_user = loadone_user($_GET['id']);
+                }
+                include "tai-khoan/tongHop_user/update_user.php";
+                break;
+
+            case 'update_user':
+                if (isset($_POST['btn_update_user']) && ($_POST['btn_update_user'])) {
+                    $id = $_POST['id'];
+                    $full_name = $_POST['full_name'];
+                    $user_name = $_POST['user_name'];
+                    $password = $_POST['pass'];
+                    $email = $_POST['email'];
+                    $phone = $_POST['phone'];
+                    $role = $_POST['role'];
+                    update_user($id, $phone, $user_name, $full_name, $email, $password, $role);
+                }
+                $load_all_user = loadall_user();
+                include "tai-khoan/tongHop_user/list_user.php";
+                break;
+
+                //======================= Quản lý học viên========================
+            case 'list_hocvien':
+                $sql = "select * from danhmuc order by id desc";
+                $student = loadall_user();
+                include "tai-khoan/student/list_student.php";
+                break;
+
+            case 'delete_hocvien':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    delete_user($_GET['id']);
+                }
+                $student = loadall_user();
+                include "tai-khoan/student/list_student.php";
+                break;
+            case 'edit_hocvien':
+                if (isset($_GET['id']) && ($_GET['id'] > 0)) {
+                    $load_one_student = loadone_user($_GET['id']);
+                }
+                include "tai-khoan/student/update_student.php";
+                break;
+
+            case 'update_student':
+                if (isset($_POST['btn_update_student']) && ($_POST['btn_update_student'])) {
+                    $id = $_POST['id'];
+                    $full_name = $_POST['full_name'];
+                    $user_name = $_POST['user_name'];
+                    $password = $_POST['pass'];
+                    $email = $_POST['email'];
+                    $phone = $_POST['phone'];
+                    update_user($id, $phone, $user_name, $full_name, $email, $password, $role);
+                }
+                $student = loadall_user();
+                include "tai-khoan/student/list_student.php";
+                break;
+                //================================================================
             default:
                 include_once "erro.php";
                 break;
