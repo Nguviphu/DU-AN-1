@@ -42,7 +42,7 @@ h6 {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -177,7 +177,6 @@ h6 {
   color: #555;
 }
 
-
 .header-act-icon:not(:last-child) {
   margin-right: 24px;
 }
@@ -192,7 +191,6 @@ h6 {
 .header-menu {
   margin: 0 -25px 0 10;
   padding: 0;
-
 }
 
 .header-item {
@@ -211,7 +209,6 @@ h6 {
 .header-link:hover {
   color: red;
 }
-
 
 .header-slide {
   max-width: 1520px;
@@ -274,7 +271,7 @@ h6 {
   padding: 50px 110px 30px 110px;
 }
 
-.clearfix>p {
+.clearfix > p {
   font-family: "Roboto";
   font-size: 15pt;
 }
@@ -306,7 +303,7 @@ h6 {
   border-radius: 50px;
 }
 
-.intro-btn>a {
+.intro-btn > a {
   text-decoration: none;
   color: red;
   font-weight: bold;
@@ -319,14 +316,14 @@ h6 {
   font-size: 20pt;
 }
 
-.icon-box-text>h3 {
+.icon-box-text > h3 {
   color: red;
   font-weight: bold;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20pt;
 }
 
-.icon-box-text>p {
+.icon-box-text > p {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 15pt;
   float: right;
@@ -363,7 +360,6 @@ h6 {
   display: flex;
   justify-content: space-between;
   margin-right: -20px;
-
 }
 
 /* .footer-main-item {
@@ -372,7 +368,7 @@ h6 {
 
 } */
 
-.footer-main-item>p {
+.footer-main-item > p {
   color: #ccc;
 }
 
@@ -385,10 +381,7 @@ h6 {
 }
 
 .shop-system {
-
   margin-right: 50px;
-
-
 }
 
 .shop-system-info {
@@ -663,11 +656,11 @@ h6 {
   display: none;
 }
 
-.form-control-checkbox:checked+.form-control-label::before {
+.form-control-checkbox:checked + .form-control-label::before {
   background-color: #007bfe;
 }
 
-.form-control-checkbox:checked+.form-control-label::after {
+.form-control-checkbox:checked + .form-control-label::after {
   opacity: 1;
   visibility: visible;
 }
@@ -826,14 +819,14 @@ h6 {
   text-decoration: none;
 }
 
-.text-blog :hover{
+.text-blog :hover {
   color: blue;
   font-size: 20pt;
   font-weight: 500;
   text-decoration: none;
 }
 
-.header-bannerhocphi{
+.header-bannerhocphi {
   text-align: center;
 }
 
@@ -841,4 +834,11 @@ h6 {
   float: left;
   margin-left: 180px;
   /* margin-top: -20px; */
+<<<<<<< HEAD
+
+.box_dk_lop {
+  display: flex;
+}
+=======
 /* } */ */
+>>>>>>> 8fc85942e88836e2a96755a0ef82cb24e4b9bbef

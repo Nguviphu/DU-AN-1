@@ -29,24 +29,13 @@
           <h1 class="header-caption">
             TRUNG TÂM ANH NGỮ ESILK
           </h1>
-
-
-
               <?php
-
               if (isset($_SESSION['info_user'])) {
               extract($_SESSION['info_user']);
-
-              
-
               ?>
-
-
           <div class="user-use" style="width: 500px;">
           <h5>Xin chào học viên: <span style="font-size: 18px; text-transform: uppercase; color: #C31D39;"><?=$name ?></span></h5>
           </div>
-
-
 
           <div class="header-user">
             <i class="fa fa-user header-icon">
@@ -59,18 +48,8 @@
             <span class="header-text">Tài khoản</span>
             <i class="fa-solid fa-chevron-down header-icon"></i>
           </div>
-
-
-
-
-
-
-
           <?php
-
               }else {
-
-
             ?>
 
           <div class="header-user">
@@ -84,13 +63,9 @@
             <span class="header-text">Tài khoản</span>
             <i class="fa-solid fa-chevron-down header-icon"></i>
           </div>
-
-
             <?php
               }
             ?>
-
-         
           <!-- header-user -->
           
         </div>
@@ -137,7 +112,7 @@
               <a href="index.php?ctrl=introduce" class="header-link">Giới thiệu</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link">Khoá học</a>
+              <a href="index.php?ctrl=dklop" class="header-link">Khoá học</a>
             </li>
             <li class="header-item">
               <a href="#" class="header-link">Lịch học</a>

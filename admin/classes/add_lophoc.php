@@ -1,66 +1,72 @@
-<?php 
-  if(is_array($list_one_lopHoc)){
-     extract($list_one_lopHoc);
-  }
-?>
-              
+
+   
             <div class="content">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header text-center bg-dark text-white text-uppercase">
-                                    Cập nhật lớp học
+                                    Tạo lớp học
                                 </div>
                                 <div class="card-body">
-                                    <form action="index.php?ctrl=update_class" method="POST" id="add_khoahoc">
-                                        <div class="mb-3">
-                                            <label for="" class="form-label">Mã ID</label>
-                                            <input type="text" name="" class="form-control" disabled  value="<?php echo $id ?>"/>
-                                        </div>
-                                        <div class="mb-3">
+                                    <form action="#" method="POST" id="add_khoahoc">
+                                    <div class="mb-3">
                                             <label for="" class="form-label">Mã lớp</label>
-                                            <input type="text" name="class_code" class="form-control" value="<?php if(isset($class_code)&&($class_code!="")) echo $class_code;?>"/>
+                                            <input type="text" name="class_code" class="form-control" />
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="" class="form-label">Tên lớp học</label>
-                                            <input type="text" name="class_name" class="form-control" value="<?php if(isset($class_name)&&($class_name!="")) echo $class_name;?>"/>
+                                            <label for="" class="form-label">Tên lớp</label>
+                                            <input type="text" name="class_name" class="form-control" />
                                         </div>
 
                                         <div class="mb-3">
-                                            <label for="" class="form-label">Tên môn học</label>
-                                            <input type="text" name="subject" class="form-control"   value="<?php echo $subject ?>"/>
+                                            <label for="" class="form-label">Môn học</label>
+                                            <select name="subject" id="" class="form-control">
+                                                <option value="" class="form-control">Chọn môn học</option>
+                                                <?php 
+                                                $listall_monhoc=loadall_monHoc();
+                                                    foreach($listall_monhoc as $monhoc){
+                                                        extract($monhoc);
+                                                    echo '<option value="'.$subject_title.'" class="form-control">'.$subject_title.'</option>';
+                                                    }
+                                                ?>
+                                            </select>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="" class="form-label">Giáo viên</label>
-                                            <input type="text" name="teacher" class="form-control" value="<?php if(isset($teacher)&&($teacher!="")) echo $teacher;?>"/>
+                                            <select name="teacher" id="" class="form-control">
+                                                <option value="" class="form-control">Chọn giáo viên</option>
+                                            </select>
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="" class="form-label">Lộ trình</label>
-                                            <input type="text" name="number_session" class="form-control" value="<?php if(isset($number_session)&&($number_session!="")) echo $number_session;?>"/>
+                                            <input type="text" name="number_session" class="form-control" />
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="" class="form-label">Giá tiền</label>
-                                            <input type="text" name="price" class="form-control" value="<?php if(isset($price)&&($price!="")) echo $price;?>"/>
+                                            <input type="text" name="price" class="form-control" />
                                         </div>
 
                                         <div class="mb-3">
                                             <label for="" class="form-label">Tình trạng</label>
-                                            <input type="text" name="status" class="form-control" value="<?php if(isset($status)&&($status!="")) echo $status;?>"/>       
+                                            <select name="status" id="" class="form-control">
+                                            <option value="Còn lớp">Còn lớp</option>
+                                            <option value="Hết lớp">Hết lớp</option>    
+                                            </select>
                                         </div>
+                                        
                                         <p style="color: red;font-weight: bold;">
                                             <?php
                                                 if(isset($thongbao)&&($thongbao!="")) echo $thongbao; 
                                             ?>
                                         </p>
                                         <div class="mb-3 text-center">
-                                            <input type="hidden" name="id" value="<?php if(isset($id)&&($id>0)) echo $id;?>">
                                             <input type="reset" value="Nhập lại" class="btn btn-danger mr-3" />
-                                            <input type="submit" name="btn_update_class" value="Cập Nhật"
+                                            <input type="submit" name="btn_add_class" value="Tạo lớp"
                                                 class="btn btn-primary mr-3" />
                                             <a href="index.php?ctrl=list_lophoc"><input type="button" class="btn btn-success"
                                                     value="Danh sách" /></a>
