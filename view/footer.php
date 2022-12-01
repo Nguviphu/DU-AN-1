@@ -66,6 +66,7 @@
   </div>
 
   <script src="./public/js/slide.js"></script>
+  <script src="./public/js/validate.js"></script>
   </body>
 
   </html>
