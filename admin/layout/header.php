@@ -56,10 +56,7 @@
                             <a href="index.php?ctrl=add_lophoc">
                                 <i class="fas fa-plus"></i>Tạo lớp học</a>
                         </li>
-                        <li>
-                            <a href="index.php?ctrl=add_lophoc">
-                                <i class="fas fa-plus"></i>Đăng ký lớp</a>
-                        </li>
+
                         <li>
                             <a href="index.php?ctrl=list_lophoc">
                                 <i class="fas fa-list-ul"></i>Danh sách lớp học</a>
@@ -90,7 +87,7 @@
                     </a>
                     <ul class="collapse list-unstyled" id="teacher">
                         <li>
-                            <a href="#">
+                            <a href="index.php?ctrl=list_giaovien">
                                 <i class="fas fa-list-ul"></i>Danh sách giáo viên</a>
                         </li>
                     </ul>
@@ -104,7 +101,7 @@
                     </a>
                     <ul class="collapse list-unstyled" id="student">
                         <li>
-                            <a href="#">
+                            <a href="index.php?ctrl=list_hocvien">
                                 <i class="fas fa-list-ul"></i>Danh sách học viên</a>
                         </li>
                     </ul>

@@ -12,15 +12,13 @@ if (isset($_POST['btn_login']) && ($_POST['btn_login'])) {
     $_SESSION['role'] = $role;
     if ($role == 1)  header('location: index.php');
     else {
-        $thongbao = "Username hoặc Password không tồn tại";
+        $thongbao = "Thông tin admin không chính xác";
     }
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>Login_Admin</title>

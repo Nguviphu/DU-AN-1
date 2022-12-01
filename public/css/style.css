@@ -42,7 +42,7 @@ h6 {
 }
 
 .wrapper {
-  max-width: 90%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -834,11 +834,7 @@ h6 {
   float: left;
   margin-left: 180px;
   /* margin-top: -20px; */
-<<<<<<< HEAD
 
 .box_dk_lop {
   display: flex;
 }
-=======
-/* } */ */
->>>>>>> 8fc85942e88836e2a96755a0ef82cb24e4b9bbef

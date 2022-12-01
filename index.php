@@ -24,9 +24,7 @@
             include_once "view/blog.php";
             break;
 
-
          case 'dangky':
-
             $check_phone_email = select_all_phone_email();
             $arr_phone = select_phone($check_phone_email);
             $arr_email = select_email($check_phone_email);
@@ -37,24 +35,25 @@
                // $checkpass = "/^0[0-9]{9}$/";
 
                if (empty($_POST['fullname'])) {
-                  $error['fullname'] = "Tên đăng nhập không được trống";
+                  $error['fullname'] = "Họ tên không được trống";
                } else {
-                  $name = $_POST['fullname'];
+                  $fullname = $_POST['fullname'];
+               }
+
+               if (empty($_POST['name'])) {
+                  $error['name'] = "Tên đăng nhập không được trống";
+               } else {
+                  $name = $_POST['name'];
                }
 
 
                if (empty($_POST['sdt'])) {
                   $error['sdt'] = "SĐT không được trống";
-               } 
-               elseif (!preg_match("/^0[0-9]{9}$/", $_POST['sdt'])) {
+               } elseif (!preg_match("/^0[0-9]{9}$/", $_POST['sdt'])) {
                   $error['sdt'] = "SĐT chưa đúng định dạng";
-               }
-
-               elseif (in_array($_POST['sdt'], $arr_phone)) {
+               } elseif (in_array($_POST['sdt'], $arr_phone)) {
                   $error['sdt'] = "SĐT đã tồn tại trong hệ thống";
-               } 
-               
-               else {
+               } else {
                   $phone = $_POST['sdt'];
                }
 
@@ -64,13 +63,9 @@
                } elseif (!preg_match("/^[a-zA-Z0-9._-]+@[a-zA-Z0-9-]+\.[a-zA-Z.]{2,5}$/", $_POST['email'])) {
 
                   $error['email'] = "Email chưa đúng định dạng";
-               }
-               
-               elseif (in_array($_POST['email'], $arr_email)) {
-                  $error['sdt'] = "Email đã tồn tại trong hệ thống";
-               } 
-
-               else {
+               } elseif (in_array($_POST['email'], $arr_email)) {
+                  $error['email'] = "Email đã tồn tại trong hệ thống";
+               } else {
                   $email = $_POST['email'];
                }
 
@@ -96,8 +91,8 @@
                if ($_POST['pass-confirm'] !== $_POST['pass']) {
                   $error['pass-confirm'] = "Mật khẩu nhập lại không khớp!";
                }
-               if (!empty(!empty($name) && !empty($phone) && !empty($email) && !empty($image) && !empty($pass) && !empty($_POST['pass-confirm']))) {
-                  insert_user($phone, $name, $email, $image, $pass);
+               if (!empty(!empty($fullname) && !empty($name) && !empty($phone) && !empty($email) && !empty($image) && !empty($pass) && !empty($_POST['pass-confirm']))) {
+                  insert_user($phone, $name, $fullname, $email, $image, $pass);
                   $thongbao = "✔️ Đăng ký thành công";
                }
             }
@@ -154,7 +149,7 @@
    }
 
 
-   
+
 
 
 
