@@ -1,8 +1,6 @@
 <?php
-
-
 // Hàm kết nối CSDL
-    function pdo_get_connect(){
+function pdo_get_connect(){
     $hostname = "localhost";
     $dbname = "db_esilk";
     $username = "root";
@@ -55,11 +53,7 @@ function pdo_execute_return_lastInsertId($sql){
 
 }
 
-
-
-
 // Hàm truy vấn nhiều dữ liệu
-
 
     function pdo_query($sql){
         $sql_args = array_slice(func_get_args(), 1);
@@ -96,3 +90,8 @@ function pdo_query_one($sql){
          unset($connect);
      }
 }
+
+?>
+
+
+

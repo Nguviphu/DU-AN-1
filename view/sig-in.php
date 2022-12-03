@@ -29,7 +29,7 @@
 
                     <div class="form-group">
                         <label for="#" class="form-label">Tạo mật khẩu</label>
-                        <input type="password" name="pass" class="form-input" />
+                        <input type="password" name="pass" class="form-input" placeholder=" Chứa kí tự hoa, thường, số hoặc kí tự đặc biệt" />
                         <p style="color: red;"><?php if(!empty($error['pass'])) echo $error['pass'] ?></p>
                     </div>
                     <div class="form-group">

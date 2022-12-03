@@ -8,7 +8,7 @@
             </div>
             <div class="box box-primary">
                 <div class="box-body">
-                    <form action="" method="post" class="table-responsive">
+                    <form action="?btn_delete_all" method="post" class="table-responsive">
                         <button type="submit" class="btn btn-danger mb-1" id="deleteAll" onclick="">
                             Xóa mục đã chọn
                         </button>
@@ -23,31 +23,29 @@
                                     <th>Số Buổi Học</th>
                                     <th>Lịch Trình</th>
                                     <th>Trạng Thái</th>
+                                    <th>Học Phí</th>
                                     <th>
-                                        <a href="index.php?act=addlophoc" class="btn btn-success text-white">Thêm mới <i class="fas fa-plus-circle"></i></a>
+                                        <a href="" class="btn btn-success text-white">Thêm mới <i class="fas fa-plus-circle"></i></a>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($classes as $class) {
-                                    extract($class);
-                                    $sua_lh = "index.php?act=sua_lh&id=" . $id;
-                                    $xoa_lh = "index.php?act=xoa_lh&id=" . $id;
-                                ?>
+                                <?php foreach ($classes as $value) { ?>
                                     <tr>
                                         <td>
                                             <input type="checkbox" name="" value="" />
                                         </td>
-                                        <td><?= $id ?></td>
-                                        <td><?= $class_code ?></td>
-                                        <td><?= $teacher ?></td>
-                                        <td><?= $subject ?></td>
-                                        <td><?= $number_session ?></td>
-                                        <td><?= $schedule_id ?></td>
-                                        <td><?= $status ?></td>
+                                        <td><?= $value['id']; ?></td>
+                                        <td><?= $value['class_code']; ?></td>
+                                        <td><?= $value['teacher']; ?></td>
+                                        <td><?= $value['subject']; ?></td>
+                                        <td><?= $value['number_session']; ?></td>
+                                        <td><?= $value['schedule_id']; ?></td>
+                                        <td><?= $value['status']; ?></td>
+                                        <td><?= $value['id']; ?></td>
                                         <td class="text-end">
-                                            <a href="<?= $sua_lh ?>"  class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                                            <a href="<?= $xoa_lh ?>" class="btn btn-outline-danger btn-rounded" onclick="return confirm('Bạn có chắc muốn xóa chứ ?')"><i class="fas fa-trash"></i></a>
+                                            <a href="" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                                            <a href="" class="btn btn-outline-danger btn-rounded" onclick=""><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php } ?>
