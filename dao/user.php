@@ -62,4 +62,21 @@ function select_email($array) {
 
 
 
+function CheckUser($name, $pass)
+{
+    $conn = pdo_get_connect();
+    $sql = $conn->prepare("select * from student where name = '" . $name . "' and password = '" . $pass . "'");
+    $sql->execute();
+    $result = $sql->setFetchMode(PDO::FETCH_ASSOC);
+    $kq = $sql->fetchAll();
+    if (count($kq) > 0) {
+        return $kq[0]['role'];
+    } else {
+        return 0;
+    }
+
+}
+
+
+
 ?>

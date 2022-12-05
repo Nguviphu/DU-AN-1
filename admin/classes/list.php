@@ -6,6 +6,8 @@
                                 Danh sách lớp học
                             </h4>
                         </div>
+
+                       
                         <div class="box box-primary">
                             <div class="box-body">
                                 <form action="?btn_delete_all" method="post" class="table-responsive">
@@ -31,28 +33,44 @@
                                             </tr>
                                         </thead>
                                         <tbody>
+
+
+                                        <?php foreach( $classes as $value) {
+
+                                            // print_r($list_class_subject_schedule);
+                                                    
+                                                    ?>
+                                           
                                             <tr>
-                                                <?php foreach($classes as $value){?>
-                                                    <td>
-                                                    <input type="checkbox" name="" value="" />
-                                                </td>
-                                                <td><?=$value['id'];?></td>
-                                                <td><?=$value['class_code'];?></td>
-                                                <td><?=$value['teacher'];?></td>
-                                                <td><?=$value['subject'];?></td>
-                                                <td><?=$value['number_session'];?></td>
-                                                <td><?=$value['schedule_id'];?></td>
-                                                <td><?=$value['status'];?></td>
-                                                <td><?=$value['price'];?></td>
+                                                
+                                                <td><input type="checkbox" name="" value="" /></td>
+                                                
+                                                <td><?php echo $value['id'];?></td>
+                                                <td><?php echo $value['class_code'];?></td>
+                                                <td><?php echo $value['teacher'];?></td>
+                                                <td><?php echo $value['name'];?></td>
+                                                <td><?php echo $value['number_session'];?></td>
+                                                <td><?php echo $value['schedule_detail'];?></td>
+                                                <td><?php echo $value['status'];?></td>
+                                                <td>.....</td>
                                                 <td class="text-end">
                                                     <a href="" class="btn btn-outline-info btn-rounded"><i
                                                             class="fas fa-pen"></i></a>
                                                     <a href="" class="btn btn-outline-danger btn-rounded" onclick=""><i
                                                             class="fas fa-trash"></i></a>
                                                 </td>
-                                                <?php } ?>
                                                 
                                             </tr>
+
+                                            
+
+                                            <?php
+                                                
+                                            } 
+                                                
+                                                ?>
+
+                                                
                                         </tbody>
                                     </table>
                                 </form>

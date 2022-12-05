@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <title>Trung tâm ANH NGỮ ESILK</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="../public/css/bootstrap.min.css" type="text/css" />
@@ -19,37 +19,52 @@
     <div class="wrapper">
         <nav id="sidebar">
             <div class="sidebar-header">
-                <a href="#">
+                <a href="index.php">
                     <img src="../public/image/LogoES.png" alt="logo" class="img-fluid logo">
                 </a>
             </div>
             <ul class="list-unstyled components text-secondary">
                 <li>
+                    <a href="index.php"><i class="fas fa-home"></i>Trang chủ</a>
                     <a href="../index.php"><i class="fas fa-store"></i>Xem trang web</a>
                 </li>
-                <li>
-                    <a href=""><i class="fas fa-home"></i>Trang chủ</a>
-                </li>
-
                 <!-- Môn học -->
                 <li>
-                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
+                    <a href="#subjects" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý môn học
                         <i class="fas fa-angle-right float-xl-right"></i>
                     </a>
                     <ul class="collapse list-unstyled" id="subjects">
                         <li>
-                            <a href="../admin/index.php?act=addlophoc">
-                                <i class="fas fa-plus"></i>Thêm lớp học</a>
+                            <a href="index.php?ctrl=add_subjects">
+                                <i class="fas fa-plus"></i>Thêm môn học</a>
                         </li>
                         <li>
-                            <a href="../admin/index.php?act=list">
+                            <a href="index.php?ctrl=list_subjects">
+                                <i class="fas fa-list-ul"></i>Danh sách môn học</a>
+                        </li>
+                    </ul>
+                </li>
+                <!-- Lớp Học -->
+                <li>
+                    <a href="#classes" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
+                        <i class="fas fa-angle-right float-xl-right"></i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="classes">
+                        <li>
+                            <a href="index.php?ctrl=add_lophoc">
+                                <i class="fas fa-plus"></i>Tạo lớp học</a>
+                        </li>
+                        <li>
+                            <a href="index.php?ctrl=list_detail">
+                            <i class="fas fa-list-ul"></i>Lớp học chi tiết</a>
+                        </li>
+                        <li>
+                            <a href="index.php?ctrl=list_lophoc">
                                 <i class="fas fa-list-ul"></i>Danh sách lớp học</a>
                         </li>
                     </ul>
                 </li>
-
                 <!-- Lịch học -->
-
                 <li>
                     <a href="#schedule" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-table"></i>Quản lý lịch học
                         <i class="fas fa-angle-right float-xl-right"></i>
@@ -64,9 +79,25 @@
                         </li>
                     </ul>
                 </li>
+                <!-- giáo viên -->
+                <li>
+                    <a href="#teacher" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
+                        <i class="fas fa-user-friends"></i>Quản lý giáo viên
+                        <i class="fas fa-angle-right float-xl-right"></i>
+                    </a>
+                    <ul class="collapse list-unstyled" id="teacher">
+                        <li>
+                                <a href="index.php?ctrl=add_teacher"><i class="fas fa-list-ul"></i>Thêm giáo viên</a></a>
+                                
+                        </li>
 
+                        <li>
+                                <a href="index.php?ctrl=list_teacher"><i class="fas fa-list-ul"></i>Danh sách giáo viên</a></a>
+                                
+                        </li>
+                    </ul>
+                </li>
                 <!-- Học viên -->
-
                 <li>
                     <a href="#student" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
                         <i class="fas fa-user-friends"></i>Quản lý học viên
@@ -74,27 +105,20 @@
                     </a>
                     <ul class="collapse list-unstyled" id="student">
                         <li>
-                        <li>
                             <a href="#">
-                                <i class="fas fa-plus"></i>Thêm học viên</a>
+                                <i class="fas fa-list-ul"></i>Danh sách học viên</a>
                         </li>
-                        <a href="#">
-                            <i class="fas fa-list-ul"></i>Danh sách học viên</a>
+                    </ul>
+                </li>
+                <!-- Bình luận -->
+                <li>
+                    <a href="index.php?ctrl=comment"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
                 </li>
             </ul>
-            </li>
-
-            <!-- Bình luận -->
-            <li>
-                <a href="#"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
-            </li>
-
-            <li>
-                <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
-            </li>
-            </ul>
         </nav>
-
         <div id="body" class="active">
             <!-- navbar navigation component -->
             <nav class="navbar navbar-expand-lg navbar-white bg-white">
@@ -112,20 +136,17 @@
                                 <div class="dropdown-menu dropdown-menu-end nav-link-menu">
                                     <ul class="nav-list">
                                         <li>
-                                            <a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ
-                                                sơ</a>
+                                            <a href="" class="dropdown-item"><i class="fas fa-address-card"></i> Hồ sơ</a>
                                         </li>
                                         <li>
-                                            <a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Thông
-                                                báo</a>
+                                            <a href="" class="dropdown-item"><i class="fas fa-envelope"></i> Thông báo</a>
                                         </li>
                                         <li>
                                             <a href="" class="dropdown-item"><i class="fas fa-cog"></i> Cài đặt</a>
                                         </li>
                                         <div class="dropdown-divider"></div>
                                         <li>
-                                            <a href="" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Đăng
-                                                xuất</a>
+                                            <a href="index.php?ctrl=dangxuat" class="dropdown-item"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a>
                                         </li>
                                     </ul>
                                 </div>
