@@ -285,6 +285,13 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
                 break;
 
 
+
+            case 'pheduyet':
+                $list_detail_class = select_course_for_all_user();
+                include_once "pheduyet/list.php";
+                break;
+
+
             
 
             

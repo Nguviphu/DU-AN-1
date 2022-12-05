@@ -113,10 +113,21 @@
                 <!-- Bình luận -->
                 <li>
                     <a href="index.php?ctrl=comment"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
+                    
                 </li>
+
+                <!-- Thanh toán -->
+                <li>
+                    <a href="index.php?ctrl=pheduyet"> <i class="fas fa-comments"></i>Quản lí thanh toán</a>
+                </li>
+
                 <li>
                     <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
                 </li>
+
+
+                
+                
             </ul>
         </nav>
         <div id="body" class="active">
