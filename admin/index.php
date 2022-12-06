@@ -8,6 +8,7 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
     include_once "../dao/pdo.php";
     include_once "../dao/class_dao.php";
     include_once "../dao/user.php";
+    include_once "../dao/calendar.php";
     include_once "layout/header.php";
 
     if (isset($_GET['ctrl']) && ($_GET['ctrl']) != "") {
@@ -224,6 +225,26 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
                 include "tai-khoan/student/list_student.php";
                 break;
                 //================================================================
+
+
+                // ======================Quản lý lịch học=========================
+            case 'add_calendar':
+                if (isset($_POST['btn_add_calendar']) && ($_POST['btn_add_calendar'])) {
+                    $class_code = $_POST['class_code'];
+                    $date_time = $_POST['date_time'];
+                    insert_calendar($class_code, $date_time);
+                    $thongbao = "Thêm thành công";
+                }
+                include 'lich-hoc/add_calendar.php';
+                break;
+
+            case 'list_calendar':
+                $sql = "select * from calendar order by id";
+                $loadall_calendar = loadall_calendar();
+                include 'lich-hoc/list_calendar.php';
+                break;
+
+                // ================================================================
             default:
                 include_once "erro.php";
                 break;

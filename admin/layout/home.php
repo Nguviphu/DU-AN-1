@@ -2,7 +2,7 @@
 <div class="content">
     <div class="container">
         <div class="cards row mt-5">
-            <div class="card-single col d-flex justify-content-around bg-success text-white py-5 ml-3">
+            <div class="card-single col d-flex justify-content-around bg-info text-white py-5 ml-3">
                 <a href="index.php?ctrl=list_subjects">
                     <div>
                         <h1 class="font-weight-bold"></h1>
@@ -14,7 +14,7 @@
                     <i class="fas fa-th-list" style="font-size: 80px"></i>
                 </div>
             </div>
-            <div class="card-single col d-flex justify-content-around bg-success text-white py-5 ml-3">
+            <div class="card-single col d-flex justify-content-around bg-danger text-white py-5 ml-3">
                 <a href="index.php?ctrl=list_lophoc">
                     <div>
                         <h1 class="font-weight-bold"></h1>
@@ -22,10 +22,10 @@
                     </div>
                 </a>
                 <div>
-                    <i class="fas fa-th-list" style="font-size: 80px"></i>
+                    <i class="fa-solid fa-chalkboard-user" style="font-size: 80px"></i>
                 </div>
             </div>
-            <div class=" card-single col d-flex justify-content-around bg-warning text-white py-5 ml-3">
+            <div class=" card-single col d-flex justify-content-around bg-header text-white py-5 ml-3">
                 <div>
                     <h1 class="font-weight-bold"></h1>
                     <span>Quản lý lịch học</span>
@@ -34,7 +34,7 @@
                     <i class="fas fa-table" style="font-size: 80px"></i>
                 </div>
             </div>
-            <div class="card-single col d-flex justify-content-around bg-danger text-white py-5 ml-3">
+            <div class="card-single col d-flex justify-content-around bg-warning text-white py-5 ml-3">
                 <a href="index.php?ctrl=list_user">
                     <div>
                         <h1 class="font-weight-bold"></h1>
@@ -46,7 +46,7 @@
                     <i class="fas fa-users" style="font-size: 80px"></i>
                 </div>
             </div>
-            <div class="card-single col d-flex justify-content-around bg-primary text-white py-5 ml-3">
+            <div class="card-single col d-flex justify-content-around bg-dark text-white py-5 ml-3">
                 <div>
                     <h1 class="font-weight-bold"></h1>
                     <span>Bình luận & Đánh giá</span>

@@ -9,7 +9,7 @@
             </div>
             <div class="box box-primary">
                 <div class="box-body">
-                    <form action="index.php?ctrl=list_lophoc" method="post" class="table-responsive">
+                    <form action="index.php?ctrl=list_calendar" method="post" class="table-responsive">
                         <button type="submit" class="btn btn-danger mb-1" id="deleteAll" onclick="">
                             Xóa mục đã chọn
                         </button>
@@ -20,24 +20,19 @@
                                     <th><input type="checkbox" id="select-all" /></th>
                                     <th>STT</th>
                                     <th>Mã lớp</th>
-                                    <th>Tên lớp</th>
-                                    <th>Môn học</th>
-                                    <th>Giáo viên</th>
-                                    <th>Lộ trình</th>
-                                    <th>Giá tiền</th>
-                                    <th>Tình trạng</th>
+                                    <th>Thời gian</th>
                                     <th>
-                                        <a href="index.php?ctrl=add_lophoc" class="btn btn-success text-white">Thêm mới <i class="fas fa-plus-circle"></i></a>
+                                        <a href="index.php?ctrl=add_calendar" class="btn btn-success text-white">Thêm mới <i class="fas fa-plus-circle"></i></a>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php
-                                foreach ($listall_lophoc as $lophoc) {
-                                    extract($lophoc);
 
-                                    $edit_class = "index.php?ctrl=edit_class&id=" . $id;
-                                    $delete_class = "index.php?ctrl=delete_class&id=" . $id;
+                                foreach ($loadall_calendar as $calendar) {
+                                    extract($calendar);
+                                    $edit_calendar = "index.php?ctrl=edit_calendar&id=" . $id;
+                                    $delete_calendar = "index.php?ctrl=delete_calendar&id=" . $id;
                                 ?>
                                     <tr>
                                         <td>
@@ -45,15 +40,11 @@
                                         </td>
                                         <td><?= $id ?></td>
                                         <td><?= $class_code ?></td>
-                                        <td><?= $class_name ?></td>
-                                        <td><?= $subject ?></td>
-                                        <td><?= $teacher ?></td>
-                                        <td><?= $number_session ?></td>
-                                        <td><?= $price ?></td>
-                                        <td><?= $status ?></td>
+                                        <td><?= $date_time ?></td>
+
                                         <td class="text-end">
-                                            <a onclick="return confirm('Bạn có chắc chắn muốn sửa không?')" href="<?= $edit_class ?>" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
-                                            <a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" href="<?= $delete_class ?>" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
+                                            <a onclick="return confirm('Bạn có chắc chắn muốn sửa không?')" href="<?= $edit_calendar ?>" class="btn btn-outline-info btn-rounded"><i class="fas fa-pen"></i></a>
+                                            <a onclick="return confirm('Bạn có chắc chắn muốn xóa không?')" href="<?= $delete_calendar ?>" class="btn btn-outline-danger btn-rounded"><i class="fas fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php

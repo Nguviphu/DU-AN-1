@@ -71,7 +71,7 @@
                     </a>
                     <ul class="collapse list-unstyled" id="schedule">
                         <li>
-                            <a href="#"><i class="fas fa-plus"></i>Update lịch học</a>
+                            <a href="index.php?ctrl=add_calendar"><i class="fas fa-plus"></i>Tạo lịch học</a>
                         </li>
                         <li>
                             <a href="#">
