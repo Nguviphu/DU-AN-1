@@ -42,7 +42,7 @@ h6 {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -154,6 +154,7 @@ h6 {
   width: 650px;
   padding: 6px 12px;
   border-radius: 5px;
+
 }
 
 .header-search-icon {
@@ -171,6 +172,8 @@ h6 {
   border: solid 1px #fff;
   cursor: pointer;
 }
+
+
 
 ::-webkit-input-placeholder {
   font-size: 14px;
@@ -371,6 +374,10 @@ h6 {
   margin-right: 25px;
 
 } */
+
+.footer{
+  clear: both;
+}
 
 .footer-main-item>p {
   color: #ccc;
@@ -841,4 +848,179 @@ h6 {
   float: left;
   margin-left: 180px;
   /* margin-top: -20px; */
-/* } */ */
+/* } */ 
+
+
+.box-pay-total{
+  margin:  0 auto;
+  width: 1300px;
+  height: 300px;
+  margin-bottom: 550px;
+}
+
+.banner-pay{
+  width: 100%;
+  height: 400px;
+  /* background-color: yellow; */
+}
+
+.banner-pay>img{
+  width: 80%;
+  position: relative;
+
+}
+
+.box-pay-total>.pay{
+  width: 320px;
+  height: auto;
+  background-color: #0A2ACA;
+  /* position: absolute; */
+ float: right;
+  margin-top: -300px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+ 
+
+}
+
+.box-pay-total > .pay>h2{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.border-bottom{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.box-pay-total > .pay > p{
+  color:  white;
+  width: 98%;
+  text-align: center;
+  
+}
+
+.box-pay-total >.pay> a{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 55px;
+  padding: 10px 20px;
+  background-color: #0A2ACA;
+}
+
+.box-pay-total > img{
+  width: 500px;
+  
+}
+
+.box-pay-total > .banner-pay > img{
+  float: right;
+  margin-top: -200px;
+}
+
+.box-pay-total > .card{
+  float: right;
+  margin-top: -600px;
+  margin-right: 100px;
+}
+
+
+
+.card{
+  width: 400px;
+  float: left;
+  margin-left: 500px;
+  margin-top: -300px;
+}
+
+.border-item{
+  border: 3px solid #D0001E;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.list_course > li{
+  margin-bottom: 10px;
+}
+
+.list_course > input {
+  margin-bottom: 10px;
+}
+
+.list_course > input{
+  color: red;
+}
+
+.submit{
+    padding: 10px 20px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+.porto-price-box > button{
+  margin-left: 40px;
+}
+
+.porto-price-box > a > button{
+  margin-left: 40px;
+}
+
+.box-pay-total > .pay{
+  float: left;
+  margin-top: -100px;
+  margin-left: 500px;
+  border: 1px solid blue;
+}
+
+.video>video{
+  margin: 100px 0;
+}
+
+.box-pay-total > a{
+  float: left;
+  margin-left: 150px;
+
+}
+
+.box-pay-total > a > button{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+}
+
+.previous {
+  width: 1300px;
+  float: left;
+}
+
+.previous > a{
+  float: right;
+  margin-bottom: 50px;
+ 
+}
+
+.previous > a > button{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+.box-course{
+  width: 310px;
+  margin-top: -695px;
+  margin-left: 5px;
+  position: relative;
+  
+}
+
+.title-hocphi > video{
+  position: relative;
+}
+

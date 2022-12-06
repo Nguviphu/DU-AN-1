@@ -1,7 +1,7 @@
 <main class="main">
             <div class="main-form">
                 <form action="index.php?ctrl=dangky" class="form" method="post" enctype="multipart/form-data">
-                    <h4 class="form-title">Đăng ký</h4>
+                    <h4 class="form-title">Đăng ký tài khoản</h4>
                    
                     <div class="form-group">
                         <label for="#" class="form-label">Tên đăng nhập</label>

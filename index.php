@@ -1,9 +1,14 @@
    <?php
 
    session_start();
+   ob_start();
 
    include_once "dao/pdo.php";
+   include_once "dao/teacher.php";
    include_once "dao/user.php";
+   include_once "dao/schedule.php";
+   include_once "dao/course-assessment.php";
+   include_once "dao/comment.php";
    include_once "view/header.php";
 
    if (isset($_GET['ctrl']) && ($_GET['ctrl']) != "") {
@@ -11,6 +16,43 @@
       $ctrl = $_GET['ctrl'];
 
       switch ($ctrl) {
+
+
+
+         case 'schedule-detail':
+
+            if(isset($_GET['user']) && ($_GET['user']) > 0){
+                  // $id_user = $_SESSION['info_user']['id'];
+                  $id_user = $_GET['user'];
+
+                  $detail_schedule =  select_detail_schedule_for_one_user($id_user);
+
+                  // print_r($detail_schedule);
+                 
+            }
+
+            include_once "view/schedule-detail.php";
+            break;
+
+
+
+         case 'schedule':
+
+            if(isset($_SESSION['info_user'])) {
+               $all_schedule = select_all_schedule_for_one_user($_SESSION['info_user']['id']);
+               $arr_status = select_status($all_schedule);
+            }
+            // print_r($all_schedule);
+
+            
+            // print_r($arr_status);
+           
+            
+            include_once "view/schedule.php";
+            break;
+
+
+        
 
          case 'introduce':
 
@@ -150,7 +192,7 @@
 
          case 'dangxuat':
             session_unset();
-            header("location: index.php");
+            header('location: index.php');
 
             break;
          case 'dklop':
@@ -164,8 +206,175 @@
                header('location: index.php');
             }
             $classes = class_list();
+            // print_r($classes);
             include 'view/danhsachlop.php';
             break;
+
+            case 'sign-sourse':
+             
+               include 'dao/class_dao.php';
+               if(isset($_GET['idlop']) && ($_GET['idlop']) > 0){
+                
+                  $one_classes = select_one_class($_GET['idlop']);
+                  
+              
+               }
+
+               
+          
+               include_once "view/sign-sourse-2.php";
+               break;
+
+
+               case 'sign-sourse-2':
+                  include 'dao/class_dao.php';
+
+                  $class_student = sellect_class_for_student($_SESSION['info_user']['id']);
+                  $arr_class_id = select_class_id($class_student);
+   
+
+                  if(isset($_POST['submit-course']) && ($_POST['submit-course'])) {
+
+                     
+                     
+                       
+                     if(in_array($_POST['class'], $arr_class_id)){
+
+                        $error['class'] = "Bạn đã đăng kí lớp học này trước đó.";
+                     
+                     }else{
+                     $id_class = $_POST['class'];
+
+                     }
+                     
+                     $id_student= $_SESSION['info_user']['id'];
+                     $id_room = $_POST['room'];
+                     $id_teacher = $_POST['teacher'];
+                     $id_schedule = $_POST['schedule'];
+                     $status = $_POST['status'];
+                     
+                     
+                     if(!empty(!empty($id_class) && !empty($id_student) && !empty($id_room) && !empty($id_teacher) && !empty($status))) {
+
+                        $course_curent =  insert_class_detail($id_class, $id_student, $id_room, $id_schedule, $id_teacher, $status);
+                        
+                       
+                        if(isset($_POST['submit-course']) && ($_POST['submit-course'])) {
+                           include_once "view/pay.php";
+                        }
+                        
+                            
+                        
+                     }
+
+                     
+                    
+                    
+                  
+                  }
+                  
+                  
+                  include_once "view/sign-sourse-2.php";
+                  break;
+   
+
+
+
+
+
+
+
+            case 'pay':
+               include 'dao/class_dao.php';
+              
+
+               
+               include_once "view/pay.php";
+               break;
+
+               case 'finish-pay':
+
+                  include_once "view/finish-pay.php";
+                  break;
+
+               case 'course-assessment':
+                  $list_comment = select_all_comment();
+                  if(isset($_SESSION['info_user'])) {
+                     $list_comment2 = select_all_comment2($_SESSION['info_user']['id']);
+
+                  }
+
+
+                  if(isset($_SESSION['info_user']['id'])) {
+                  $list_course_assessment  = select_course_for_one_user($_SESSION['info_user']['id']);
+                 
+                  }
+
+                  include_once "view/course-assessment.php";
+                  break;
+
+                  case 'rate-it':
+                     
+
+
+
+                     if(isset($_GET['id_class_detail']) && ($_GET['id_class_detail']) > 0) {
+                        
+                        $id_class_detail =  select_id_detail($_GET['id_class_detail']);
+
+                       
+                     }
+
+
+                     if(isset($_POST['send']) && ($_POST['send'])) {
+
+                        
+
+                        if(empty($_POST['rate_it_content'])) {
+                           $error['rate_it_content'] = "Bạn chưa viết đánh giá nào cả!";
+
+                        }else{
+                           $rate_it = $_POST['rate_it_content'];
+                        }
+                        
+
+
+                        if(empty($_POST['id_class_detail'])) {
+                           $error['id_class_detail'] = "Trống mã!";
+
+                        }else{
+                           $id = $_POST['id_class_detail'];
+                        }
+                        
+                        
+                       
+
+                        if(!empty(!empty($rate_it) && !empty($id))) {
+                           insert_table_rate_it($rate_it, $id);
+
+                           if(isset($_POST['send']) && ($_POST['send'])) {
+
+                              include_once "view/thanks.php";
+
+                           }
+                        }
+
+                        
+
+                     }
+                     
+                  
+                     include_once "view/rate-it.php";
+                     break;
+
+
+                     case 'thanks':
+
+                       
+                        include_once "view/thanks.php";
+                        break;
+
+
          default:
             require_once "view/home.php";
             break;
@@ -175,10 +384,8 @@
    }
 
 
-   
-
 
 
    include_once "view/footer.php";
-
+   ob_end_flush(); 
    ?>

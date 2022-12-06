@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="./public/css/reset.css" />
   <link rel="stylesheet" href="./public/css/style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
@@ -137,14 +138,19 @@
               <a href="index.php?ctrl=introduce" class="header-link">Giới thiệu</a>
             </li>
             <li class="header-item">
-              <a href="" class="header-link">Khoá học</a>
+              <a href="index.php?ctrl=dklop" class="header-link">Khoá học</a>
             </li>
             <li class="header-item">
-              <a href="#" class="header-link">Lịch học</a>
+              <a href="index.php?ctrl=schedule" class="header-link">Lịch học</a>
             </li>
             <li class="header-item">
               <a href="index.php?ctrl=blog" class="header-link">Blog</a>
             </li>
+
+            <li class="header-item">
+              <a href="index.php?ctrl=course-assessment" class="header-link">Đánh giá khóa học</a>
+            </li>
+            
           </ul>
         </nav>
       </div>
