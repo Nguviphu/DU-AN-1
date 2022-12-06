@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 05, 2022 lúc 04:02 PM
+-- Thời gian đã tạo: Th12 06, 2022 lúc 04:15 AM
 -- Phiên bản máy phục vụ: 10.4.24-MariaDB
 -- Phiên bản PHP: 7.4.29
 
@@ -102,7 +102,9 @@ CREATE TABLE `class_detail` (
 INSERT INTO `class_detail` (`id`, `class_id`, `student_id`, `room_id`, `schedule_id`, `teacher_id`, `status`) VALUES
 (200, 57, 1, 2, 2, 4, 'Đã thanh toán'),
 (202, 56, 1, 1, 1, 2, 'Đã thanh toán'),
-(215, 59, 5, 2, 1, 2, 'Đã thanh toán');
+(219, 59, 5, 2, 1, 2, 'Đã thanh toán'),
+(220, 60, 5, 2, 2, 5, 'Đã thanh toán'),
+(221, 59, 1, 2, 1, 2, 'Đã thanh toán');
 
 -- --------------------------------------------------------
 
@@ -148,10 +150,8 @@ INSERT INTO `rate_it` (`id`, `rate_detail`, `id_class_detail`) VALUES
 (55, 'Em thấy khóa học tiếng anh cơ bản này rất hay. Em cảm ơn trung tâm rất nhiều ạ.', 206),
 (56, 'Rất ok !!!', 207),
 (58, 'Hay', 211),
-(59, 'Hay', 215),
-(60, 'Hay', 215),
-(61, 'Hay', 215),
-(62, 'Hay', 215);
+(63, 'Cảm ơn Trung tâm Anh ngữ Esilk đã cho em một nền tảng tiếng Anh vững chắc.', 218),
+(64, 'Cảm ơn trung tâm nhiều ạ.', 220);
 
 -- --------------------------------------------------------
 
@@ -331,13 +331,13 @@ ALTER TABLE `classes`
 -- AUTO_INCREMENT cho bảng `class_detail`
 --
 ALTER TABLE `class_detail`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=216;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=222;
 
 --
 -- AUTO_INCREMENT cho bảng `rate_it`
 --
 ALTER TABLE `rate_it`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=63;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT cho bảng `rooms`
