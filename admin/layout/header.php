@@ -44,9 +44,7 @@
                         </li>
                     </ul>
                 </li>
-
                 <!-- Lớp Học -->
-
                 <li>
                     <a href="#classes" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-list-alt"></i>Quản lý lớp học
                         <i class="fas fa-angle-right float-xl-right"></i>
@@ -56,14 +54,16 @@
                             <a href="index.php?ctrl=add_lophoc">
                                 <i class="fas fa-plus"></i>Tạo lớp học</a>
                         </li>
-
+                        <li>
+                            <a href="index.php?ctrl=list_detail">
+                            <i class="fas fa-list-ul"></i>Lớp học chi tiết</a>
+                        </li>
                         <li>
                             <a href="index.php?ctrl=list_lophoc">
                                 <i class="fas fa-list-ul"></i>Danh sách lớp học</a>
                         </li>
                     </ul>
                 </li>
-
                 <!-- Lịch học -->
                 <li>
                     <a href="#schedule" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down"><i class="fas fa-table"></i>Quản lý lịch học
@@ -87,12 +87,16 @@
                     </a>
                     <ul class="collapse list-unstyled" id="teacher">
                         <li>
-                            <a href="index.php?ctrl=list_giaovien">
-                                <i class="fas fa-list-ul"></i>Danh sách giáo viên</a>
+                                <a href="index.php?ctrl=add_teacher"><i class="fas fa-list-ul"></i>Thêm giáo viên</a></a>
+                                
+                        </li>
+
+                        <li>
+                                <a href="index.php?ctrl=list_teacher"><i class="fas fa-list-ul"></i>Danh sách giáo viên</a></a>
+                                
                         </li>
                     </ul>
                 </li>
-
                 <!-- Học viên -->
                 <li>
                     <a href="#student" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle no-caret-down">
@@ -101,23 +105,28 @@
                     </a>
                     <ul class="collapse list-unstyled" id="student">
                         <li>
-                            <a href="index.php?ctrl=list_hocvien">
+                            <a href="#">
                                 <i class="fas fa-list-ul"></i>Danh sách học viên</a>
                         </li>
                     </ul>
                 </li>
 
-                <!-- Bình luận -->
+
+                <!-- Phê duyệt thanh toán -->
                 <li>
-                    <a href="/public/admin/binhluan.html"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
+                    <a href="index.php?ctrl=confirm"> <i class="fa-solid fa-comment-dollar"></i> Quản lý thanh toán</a>
                 </li>
 
+
+                <!-- Bình luận -->
+                <li>
+                    <a href="index.php?ctrl=comment"> <i class="fas fa-comments"></i>Quản lý bình luận</a>
+                </li>
                 <li>
                     <a href="#"><i class="fas fa-cog"></i>Cài đặt</a>
                 </li>
             </ul>
         </nav>
-
         <div id="body" class="active">
             <!-- navbar navigation component -->
             <nav class="navbar navbar-expand-lg navbar-white bg-white">

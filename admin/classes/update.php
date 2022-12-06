@@ -1,6 +1,7 @@
 <?php 
   if(is_array($list_one_lopHoc)){
      extract($list_one_lopHoc);
+
   }
 ?>
               
@@ -18,6 +19,30 @@
                                             <label for="" class="form-label">Mã ID</label>
                                             <input type="text" name="" class="form-control" disabled  value="<?php echo $id ?>"/>
                                         </div>
+
+                                        <div class="mb-3">
+                                            <label for="" class="form-label">Phòng học</label>
+                                            <select name="room" id="" class="form-control">
+                                
+                                            <option value="<?=$room_id ?>" class="form-control"><?php echo $rooms_name ?></option>
+                                                <?php 
+                                                $all_rooms = select_all_room();
+                                                    foreach($all_rooms as $room){
+                                                        extract($room);
+
+                                                        ?>
+
+
+                                                    <option value="<?=$room_id ?>" class="form-control"><?=$rooms_name ?></option>
+
+                                                    <?php
+                                                    }
+                                                ?>
+                                            </select>
+
+                                        </div>
+
+
                                         <div class="mb-3">
                                             <label for="" class="form-label">Mã lớp</label>
                                             <input type="text" name="class_code" class="form-control" value="<?php if(isset($class_code)&&($class_code!="")) echo $class_code;?>"/>
@@ -34,8 +59,26 @@
                                         </div>
 
                                         <div class="mb-3">
+                                           
                                             <label for="" class="form-label">Giáo viên</label>
-                                            <input type="text" name="teacher" class="form-control" value="<?php if(isset($teacher)&&($teacher!="")) echo $teacher;?>"/>
+                                            <select name="teacher" id="" class="form-control">
+                                
+                                            <option value="<?=$teacher_id ?>" class="form-control"><?php echo $name_teacher ?></option>
+                                                <?php 
+                                                $list_teacher = select_all_teacher();
+                                                    foreach($list_teacher as $teacher){
+                                                        extract($teacher);
+
+                                                        ?>
+
+
+                                                    <option value="<?=$id_teacher ?>" class="form-control"><?=$name_teacher ?></option>
+
+                                                    <?php
+                                                    }
+                                                ?>
+                                            </select>
+                                        
                                         </div>
 
                                         <div class="mb-3">

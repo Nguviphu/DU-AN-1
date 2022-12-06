@@ -10,7 +10,7 @@
                         <div class="col-lg-12">
                             <div class="card">
                                 <div class="card-header text-center bg-dark text-white text-uppercase">
-                                    Thêm khoá học
+                                    Sửa khoá học
                                 </div>
                                 <div class="card-body">
                                     <form action="index.php?ctrl=update_subjects" method="POST" id="add_khoahoc">

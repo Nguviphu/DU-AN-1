@@ -42,7 +42,7 @@ h6 {
 }
 
 .wrapper {
-  max-width: 1200px;
+  max-width: 1300px;
   margin: 0 auto;
 }
 
@@ -154,6 +154,7 @@ h6 {
   width: 650px;
   padding: 6px 12px;
   border-radius: 5px;
+
 }
 
 .header-search-icon {
@@ -172,10 +173,13 @@ h6 {
   cursor: pointer;
 }
 
+
+
 ::-webkit-input-placeholder {
   font-size: 14px;
   color: #555;
 }
+
 
 .header-act-icon:not(:last-child) {
   margin-right: 24px;
@@ -191,6 +195,7 @@ h6 {
 .header-menu {
   margin: 0 -25px 0 10;
   padding: 0;
+
 }
 
 .header-item {
@@ -209,6 +214,7 @@ h6 {
 .header-link:hover {
   color: red;
 }
+
 
 .header-slide {
   max-width: 1520px;
@@ -271,7 +277,7 @@ h6 {
   padding: 50px 110px 30px 110px;
 }
 
-.clearfix > p {
+.clearfix>p {
   font-family: "Roboto";
   font-size: 15pt;
 }
@@ -303,7 +309,7 @@ h6 {
   border-radius: 50px;
 }
 
-.intro-btn > a {
+.intro-btn>a {
   text-decoration: none;
   color: red;
   font-weight: bold;
@@ -316,14 +322,14 @@ h6 {
   font-size: 20pt;
 }
 
-.icon-box-text > h3 {
+.icon-box-text>h3 {
   color: red;
   font-weight: bold;
   font-family: "Roboto Condensed", sans-serif;
   font-size: 20pt;
 }
 
-.icon-box-text > p {
+.icon-box-text>p {
   font-family: "Roboto Condensed", sans-serif;
   font-size: 15pt;
   float: right;
@@ -360,6 +366,7 @@ h6 {
   display: flex;
   justify-content: space-between;
   margin-right: -20px;
+
 }
 
 /* .footer-main-item {
@@ -368,7 +375,11 @@ h6 {
 
 } */
 
-.footer-main-item > p {
+.footer{
+  clear: both;
+}
+
+.footer-main-item>p {
   color: #ccc;
 }
 
@@ -381,7 +392,10 @@ h6 {
 }
 
 .shop-system {
+
   margin-right: 50px;
+
+
 }
 
 .shop-system-info {
@@ -656,11 +670,11 @@ h6 {
   display: none;
 }
 
-.form-control-checkbox:checked + .form-control-label::before {
+.form-control-checkbox:checked+.form-control-label::before {
   background-color: #007bfe;
 }
 
-.form-control-checkbox:checked + .form-control-label::after {
+.form-control-checkbox:checked+.form-control-label::after {
   opacity: 1;
   visibility: visible;
 }
@@ -819,14 +833,14 @@ h6 {
   text-decoration: none;
 }
 
-.text-blog :hover {
+.text-blog :hover{
   color: blue;
   font-size: 20pt;
   font-weight: 500;
   text-decoration: none;
 }
 
-.header-bannerhocphi {
+.header-bannerhocphi{
   text-align: center;
 }
 
@@ -834,7 +848,179 @@ h6 {
   float: left;
   margin-left: 180px;
   /* margin-top: -20px; */
+/* } */ 
 
-.box_dk_lop {
-  display: flex;
+
+.box-pay-total{
+  margin:  0 auto;
+  width: 1300px;
+  height: 300px;
+  margin-bottom: 550px;
 }
+
+.banner-pay{
+  width: 100%;
+  height: 400px;
+  /* background-color: yellow; */
+}
+
+.banner-pay>img{
+  width: 80%;
+  position: relative;
+
+}
+
+.box-pay-total>.pay{
+  width: 320px;
+  height: auto;
+  background-color: #0A2ACA;
+  /* position: absolute; */
+ float: right;
+  margin-top: -300px;
+  padding-bottom: 10px;
+  border-radius: 10px;
+ 
+
+}
+
+.box-pay-total > .pay>h2{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.border-bottom{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+  border-bottom: 1px solid white;
+}
+
+.box-pay-total > .pay > p{
+  color:  white;
+  width: 98%;
+  text-align: center;
+  
+}
+
+.box-pay-total >.pay> a{
+  text-decoration: none;
+  font-size: 20px;
+  color: white;
+  position: absolute;
+  margin-top: 30px;
+  margin-left: 55px;
+  padding: 10px 20px;
+  background-color: #0A2ACA;
+}
+
+.box-pay-total > img{
+  width: 500px;
+  
+}
+
+.box-pay-total > .banner-pay > img{
+  float: right;
+  margin-top: -200px;
+}
+
+.box-pay-total > .card{
+  float: right;
+  margin-top: -600px;
+  margin-right: 100px;
+}
+
+
+
+.card{
+  width: 400px;
+  float: left;
+  margin-left: 500px;
+  margin-top: -300px;
+}
+
+.border-item{
+  border: 3px solid #D0001E;
+  padding: 10px 20px;
+  border-radius: 10px;
+}
+
+.list_course > li{
+  margin-bottom: 10px;
+}
+
+.list_course > input {
+  margin-bottom: 10px;
+}
+
+.list_course > input{
+  color: red;
+}
+
+.submit{
+    padding: 10px 20px;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-left: 50px;
+}
+
+.porto-price-box > button{
+  margin-left: 40px;
+}
+
+.porto-price-box > a > button{
+  margin-left: 40px;
+}
+
+.box-pay-total > .pay{
+  float: left;
+  margin-top: -100px;
+  margin-left: 500px;
+  border: 1px solid blue;
+}
+
+.video>video{
+  margin: 100px 0;
+}
+
+.box-pay-total > a{
+  float: left;
+  margin-left: 150px;
+
+}
+
+.box-pay-total > a > button{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+}
+
+.previous {
+  width: 1300px;
+  float: left;
+}
+
+.previous > a{
+  float: right;
+  margin-bottom: 50px;
+ 
+}
+
+.previous > a > button{
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+
+
+.box-course{
+  width: 310px;
+  margin-top: -695px;
+  margin-left: 5px;
+  position: relative;
+  
+}
+
+.title-hocphi > video{
+  position: relative;
+}
+
