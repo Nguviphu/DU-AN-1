@@ -25,7 +25,7 @@
                         </ul> 
                         <input type="hidden" name="id_lop" value="<?=$value['id'];?>">
                         <button type="submit" title="" target="_self"
-                            class="btn btn-modern btn-borders btn-lg btn-primary btn-bottom">HỌC THỬ MIỄN PHÍ</button>
+                            class="btn btn-modern btn-borders btn-lg btn-primary btn-bottom">Đăng ký lớp học</button>
                     </div>
                     </form>
                     

@@ -160,7 +160,6 @@
                $id_lop= $_POST['id_lop'];
                $id_room=1;
                // $mess="Đã Đăng Ký Thành Công";
-
                dklop($id_lop,$id_user,$id_room);
                header('location: index.php');
             }
