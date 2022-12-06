@@ -208,7 +208,17 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
 
                 case 'list_detail':
 
-                    $list_detail_class = select_course_for_all_user();
+                    if(isset($_POST['search']) && ($_POST['search'])) {
+
+                        $idsv = $_POST['content'];
+                        
+                    }else{
+                        $idsv = 0;
+                    }
+
+                
+
+                    $list_detail_class = select_course_for_all_user($idsv);
                     // print_r($list_detail_class);
 
                     include_once "classes/list_detail.php";
@@ -251,7 +261,12 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
                     }
 
 
-                    $list_detail_class = select_course_for_all_user();
+                    if(isset($idsv) && ($idsv > 0)) {
+                        $list_detail_class = select_course_for_all_user($idsv);
+
+                    }else{
+                        $list_detail_class = select_course_for_all_user(0);
+                    }
                     include_once "classes/list_detail.php";
                     break;
 
@@ -285,11 +300,77 @@ if (isset($_SESSION['role']) && ($_SESSION)['role'] == 1) {
                 break;
 
 
+            // Phê duyệt thanh toán
 
-            case 'pheduyet':
-                $list_detail_class = select_course_for_all_user();
-                include_once "pheduyet/list.php";
+            case 'confirm':
+
+                if(isset($_POST['search']) && ($_POST['search'])) {
+
+                    $idsv = $_POST['content'];
+                   
+                    
+                }else{
+                  $idsv=0;
+                }
+
+                $list_detail_class = confirm_pay($idsv);
+            
+
+            
+
+                
+                
+                $list_status = select_all_status();
+                $arr_status = select_arr_status($list_status);
+                // print_r($arr_status);
+                include_once "confirm/list.php";
                 break;
+
+
+                case 'edit_status':
+
+                    if(isset($_GET['id']) && ($_GET['id']) > 0) {
+
+                    $id = $_GET['id'];
+
+                    $class_detail_for_one_student =  select_course_for_one_user2($id);
+
+                     
+
+                    }
+
+                    include_once "confirm/update.php";
+                    break;
+
+
+
+
+                case 'update_status':
+
+                    if (isset($_POST['btn_update_status']) && ($_POST['btn_update_status'])) {
+                            $status = $_POST['status'];
+                            $id= $_POST['id'];
+
+                            update_class_detail($status, $id);
+                            
+                    }
+
+
+                    if(isset($idsv) && ($idsv > 0)) {
+                        $list_detail_class = confirm_pay($idsv);
+
+                    }else{
+                        $list_detail_class = confirm_pay(0);
+                    }
+
+
+                    
+                    include_once "confirm/list.php";
+                    break;
+
+            
+
+                
 
 
             

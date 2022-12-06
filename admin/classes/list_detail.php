@@ -8,15 +8,31 @@
                     Chi tiết lịch học
                 </h4>
             </div>
+
+            
+
             <div class="box box-primary">
+
+            
                 <div class="box-body">
+
+            <form style="margin-bottom: 10px; position: relative;" class="header-search" action="index.php?ctrl=list_detail" method="post">
+            <input style="width: 300px; padding: 5px 20px;" type="text" class="header-input-2" name="content" value="      "  placeholder="    - Mã sinh viên ..." />
+            <span style="float: left; margin-top: 8px; margin-left: -295px; position: absolute;">PH - </span>
+          
+              <input style="padding: 5px 20px;" class="button-search" type="submit" name="search" value="Tìm kiếm">
+              
+          
+          </form>
+          
+          
                     <form action="?btn_delete_all" method="post" class="table-responsive">
                         
                         <table width="100%" class="table table-hover table-bordered text-center">
                             <thead class="thead-dark">
                                 <tr>
                                     <th>STT</th>
-                                    <th>ID</th>
+                                    <th>MSV</th>
                                     <th>Tên lớp</th>
                                     <th>Môn học</th>
                                     <th>Phòng học</th>
@@ -46,7 +62,7 @@
 
                                         echo '<tr>
                                         <td>'.$i.'</td>
-                                        <td>'.$id.'</td>
+                                        <td>PH'.$student_id.'</td>
                                         <td>'.$class_name.'</td>
                                         <td>'.$subject.'</td>
                                         <td>'.$rooms_name.'</td>

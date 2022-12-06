@@ -129,15 +129,21 @@ function update_lopHoc($id,$class_code, $room, $class_name,$subject,$teacher,$nu
 
      // lấy khóa học chi tiết của tất cả các sinh viên
 
-     function select_course_for_all_user() {
+     function select_course_for_all_user($idsv) {
 
-        $sql = "SELECT classes.class_name,classes.subject, teacher.name_teacher, student.name ,rooms.rooms_name, class_detail.status, classes.class_code, classes.number_session, schedule.schedule_detail, class_detail.id, classes.price 
+        $sql = "SELECT classes.class_name,classes.subject, teacher.name_teacher, student.name ,rooms.rooms_name, class_detail.status, classes.class_code, classes.number_session, schedule.schedule_detail, class_detail.id, classes.price, class_detail.student_id
         FROM class_detail 
         INNER JOIN classes on class_detail.class_id=classes.id 
         INNER JOIN rooms on class_detail.room_id=rooms.id_room 
         INNER JOIN schedule on class_detail.schedule_id=schedule.id 
         INNER JOIN teacher on class_detail.teacher_id=teacher.id_teacher 
-        INNER JOIN student on class_detail.student_id = student.id"; 
+        INNER JOIN student on class_detail.student_id = student.id where class_detail.status='Đã thanh toán'";
+        
+        if(isset($idsv) && ($idsv > 0)) {
+
+            $sql.= " and class_detail.student_id= '".$idsv."'";
+
+        }
       
 
         return pdo_query($sql);
@@ -149,7 +155,7 @@ function update_lopHoc($id,$class_code, $room, $class_name,$subject,$teacher,$nu
 
     function select_course_for_one_user2($id) {
 
-        $sql = "SELECT classes.class_name,classes.subject, teacher.name_teacher, student.name ,rooms.rooms_name, class_detail.status, classes.class_code, classes.number_session, schedule.schedule_detail, class_detail.id, classes.price, class_detail.schedule_id 
+        $sql = "SELECT classes.class_name,classes.subject, teacher.name_teacher, student.name ,rooms.rooms_name, class_detail.status, classes.class_code, classes.number_session, schedule.schedule_detail, class_detail.id, classes.price, class_detail.schedule_id, class_detail.student_id
         FROM class_detail 
         INNER JOIN classes on class_detail.class_id=classes.id 
         INNER JOIN rooms on class_detail.room_id=rooms.id_room 
@@ -160,6 +166,9 @@ function update_lopHoc($id,$class_code, $room, $class_name,$subject,$teacher,$nu
 
         return pdo_query_one($sql);
     }
+
+
+
 
 
 
@@ -181,6 +190,56 @@ function update_lopHoc($id,$class_code, $room, $class_name,$subject,$teacher,$nu
         pdo_execute($sql);
     }
 
+
+    // lấy tất cả trạng thái từ bảng detail
+
+    function select_all_status() {
+
+        $sql = "SELECT status FROM `class_detail` WHERE 1";
+        return pdo_query($sql);
+    }
+
+    // lấy ra 1 mảng trạng thái
+
+    function select_arr_status($array) {
+
+        $key = "status";
+
+        $arr_status =  array_map(function($item) use ($key) {
+            return $item[$key];
+        }, $array);
+
+        return $arr_status;
+    }
+
+
+
+    // lấy ra lớp học chi tiết của học viên đang chờ xác nhận thanh toán
+
+    function confirm_pay($idsv) {
+
+        $sql = "SELECT classes.class_name,classes.subject, teacher.name_teacher, student.name ,rooms.rooms_name, 
+        class_detail.status, classes.class_code, classes.number_session, schedule.schedule_detail, class_detail.id, 
+        classes.price, class_detail.student_id 
+        FROM class_detail 
+        INNER JOIN classes on class_detail.class_id=classes.id 
+        INNER JOIN rooms on class_detail.room_id=rooms.id_room 
+        INNER JOIN schedule on class_detail.schedule_id=schedule.id 
+        INNER JOIN teacher on class_detail.teacher_id=teacher.id_teacher 
+        INNER JOIN student on class_detail.student_id = student.id where class_detail.status='Đang chờ xác nhận'";
+
+        if(isset($idsv) && ($idsv > 0)) {
+
+        $sql.= " and class_detail.student_id= '".$idsv."'";
+
+        }
+
+
+
+
+
+        return pdo_query($sql);
+    }
 
 
     
